@@ -1,0 +1,160 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>BA Index</title>
+    <link rel="stylesheet" href="./lib/fontawesome/css/font-awesome.css">
+    <style>
+        *{
+            margin: 0;
+            padding: 0;
+        }
+        nav{
+            width: 50px;
+            height: 100vh;
+            padding-top: 20px;
+            /*background-color: #ffe8a1;*/
+            position: fixed;
+            right: 0;
+            top: 0;
+            font-size: 24px;
+            line-height: 60px;
+            text-align: center;
+            border-left: 1px solid #ffe8a1;
+        }
+        nav ul li{
+            list-style: none;
+        }
+        aside{
+            width: 200px;
+            height: 100vh;
+            /*background-color: #eee;*/
+            position: fixed;
+            left: 0;
+            top: 0;
+        }
+
+        .logo{
+            height: 45px;
+            background: url("./imgs/ba/logo_full_icon.jpg") no-repeat 0 0;
+            background-size: contain;
+            margin-bottom:  100px;
+            margin: 10px 0 0 10px;
+        }
+        aside a {
+            text-decoration: none;
+            padding-left: 90px;
+            font-size: 16px;
+            font-family: "微軟正黑體";
+            line-height: 40px;
+        }
+        .box002{
+            width: 200px;
+            height: 200px;
+            background: #9fcdff url("./imgs/ba/category_bg1.png") no-repeat 0 0;
+            background-size: cover;
+           position: fixed;
+            bottom: 0;
+            left: 0;
+        }
+        .container{
+            background: #FFF;
+            height: 200vh;
+            width: 100%;
+            padding-left: 300px;
+            box-sizing: border-box;
+            padding-top: 100px;
+        }
+
+        .rec{
+            width: 500px;
+            height: 150px;
+            background: url("./imgs/ba/se.jpg") no-repeat 0 0;
+            background-size: cover;
+            margin-left: 50px;
+        }
+        .row{
+            margin-top: 50px;
+            width: 100%;
+            display: flex;
+            flex-direction: row;
+        }
+        .box{
+            width: 320px;
+            height: 320px;
+            background: #ffe8a1;
+            border: 1px solid #999;
+            margin-left: 50px;
+        }
+        .prod1{
+            background: url("./imgs/ba/Seurat013_thumb.png") no-repeat 0 0;
+            background-size: cover;
+        }
+        .prod2{
+            background: url("./imgs/ba/Seurat033_thumb.png") no-repeat 0 0;
+            background-size: cover;
+        }
+        .prod3{
+            background: url("./imgs/ba/Seurat035_thumb.png") no-repeat 0 0;
+            background-size: cover;
+        }
+        .box2{
+            width: 300px;
+            height: 320px;
+            font-size: 14px;
+            line-height: 24px;
+            letter-spacing: 1px;
+        }
+        .box3{
+            width: 700px;
+            height: 750px;
+            background: url("./imgs/ba/DT4598.jpg") no-repeat center 0;
+            background-size: contain;
+            border: 1px solid #999;
+            margin-left: 80px;
+
+        }
+    </style>
+</head>
+<body>
+<header>
+    <nav>
+        <ul>
+            <li><a href=""><i class="fa fa-shopping-bag" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-bars" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-user" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-shopping-cart" aria-hidden="true"></i></a></li>
+            <li><a href=""><i class="fa fa-heart-o" aria-hidden="true"></i></a></li>
+        </ul>
+    </nav>
+</header>
+<aside>
+        <div class="logo"></div>
+    <ul>
+        <li><a href="">複製畫</a></li>
+        <li><a href="">雕塑品</a></li>
+        <li><a href="">文創商品</a></li>
+        <li><a href="">每月典藏</a></li>
+        <li><a href="">展覽專區</a></li>
+        <li><a href="">美術用品</a></li>
+    </ul>
+    <div class="box002"></div>
+</aside>
+<div class="container">
+    <!--<div class="rec"></div>-->
+    <!--<div class="row">-->
+        <!--<div class="box prod1"></div>-->
+        <!--<div class="box prod2"></div>-->
+        <!--<div class="box prod3"></div>-->
+    <!--</div>-->
+    <div class="row">
+        <div class="box2">
+            <p>《蒙娜麗莎》中的人物描繪手法可以說是自然主義的先驅，因此在繪畫史上具有轉捩點的重要地位。達文西運用了一種稱為「暈塗法」的技法，也就是將透明的油彩層層塗上，使底層色彩的明暗界線逐漸模糊，同時他也去掉礙眼的輪廓線，讓人物柔和的浮現出來。蒙娜麗莎的微笑永遠帶著一層柛秘的面紗，是因為她那微微翹起的嘴角左右不太平均，嘴唇的輪廓不清晰所致，加上暈塗法使光與影微妙的融合，成功地顯出獨特的效果。</p>
+        </div>
+
+        <div class="box3"></div>
+    </div>
+
+</div>
+</body>
+</html>

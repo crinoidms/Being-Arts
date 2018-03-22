@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <script src="./js/jquery-3.2.1.js"></script>
+</head>
+<body>
+<input type="text" id="num" value="5">
+    <button class="btn">load test</button>
+    <button id="btn1">變json</button>
+    <button id="btn2">變回來</button>
+    <textarea id="container"></textarea>
+
+    <script>
+        // $('button').click(function(){
+        //     $.get('./txt/a.txt', function (data) {
+        //         $('#container').append(data);
+        //     });
+        // });
+
+        // $.get{url[,data(要對象接收的資料)][,success(callback function 沒宣告就收不到資料)][,dataType]}
+        // ajax本身就是前端的功能 不用php
+        // 用ajax傳送資料到php檔  讓後臺做事
+
+        $('.btn').click(function(){
+            var n = $('#num').val();
+
+            $.get('./txt/b.php', {n:n}, function(data){
+                $('#container').text(data);
+            });
+        });
+        //可以用get傳也可以用post  get網址列會出現
+
+
+        var obj= {
+            name: 'peter',
+            gender:'male',
+            age:29
+        };
+
+        $('#btn1').click(function(){
+           var str = JSON.stringify(obj);
+            $('#container').text(str);
+        });  //將物件轉成JSON
+
+        $('#btn2').click(function(){
+           var obj = JSON.parse( $('#container').val() );
+           console.log(obj);
+        });  //將JSON轉物件
+    </script>
+</body>
+</html>

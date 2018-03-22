@@ -1,0 +1,2145 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="css/reset.css">
+    <script></script>
+    <title>home</title>
+    <style>
+         *{
+            margin:0;
+            padding: 0;
+            font-family: Arial,"jf03";
+            font-size: 16px;
+            letter-spacing: 2px;
+            box-sizing: border-box;
+            list-style: none;
+            color:#a5875d;
+            line-height: 15px;
+            transition: all .5s;
+        }
+        html, body {
+            overflow-x: hidden;
+            overflow-y: hidden;
+        }
+        p{
+            /* line-height: 20px; */
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            display: flex;
+        }
+        .flex{
+            display: flex;
+            flex-wrap:wrap ;
+            
+        }
+        .center{
+            text-align: center;
+            justify-content: center;
+        }
+        .between{
+            justify-content: space-between;
+        }
+        .icon img{
+            width:30px;
+            height:30px;
+        }
+        .fixed{
+            position: fixed;
+        }
+        @font-face {
+        font-family: jf03 ;
+        src:url(./lib/font/jf-jinxuan-fresh2.2-book.otf);
+        }
+
+        p, h1, h2, h3, h4, h5, h6, a, li{
+            font-family: Arial, jf03;
+        }
+
+        /* @keyframes width{
+			0%{
+				width:0;
+			}
+			100%{
+				width:33%;
+			}
+		}
+        @keyframes opacity{
+			0%{
+				opacity:0;
+			}
+			100%{
+				opacity:1;
+			}
+		} */
+/* home ------------------------------------------ */
+    .home_wrap{
+        background-color: transparent;
+        position: absolute;
+        top: 0;
+        left: 0;
+        height: 100%;
+        width: 100%;
+        /* background-color: red; */
+        /* transition: all .8s cubic-bezier(0.56, 0.1, 0.34, 0.91); */
+    }
+    .section{
+        height:100vh;
+        width:100%;
+        /* background-color: blue; */
+        position: relative;
+        overflow: hidden;
+    } 
+    body {
+        /* position: relative; */
+        -webkit-font-smoothing: antialiased;
+        -moz-osx-font-smoothing: grayscale;
+        min-width: 320px;
+        background: #fff;
+            }
+
+    .box {
+        position: absolute;
+        left: 0;
+        /* width: 100vw; */
+        height: 100vh;
+        -webkit-transform: translate3d(0, 0, 0);
+        transform: translate3d(0, 0, 0);
+        -webkit-transition: all 1s cubic-bezier(0.745, -0.015, 0.22, 0.995);
+        transition: all 1s cubic-bezier(0.745, -0.015, 0.22, 0.995);
+        -webkit-transition-delay: 0.8s;
+                transition-delay: 0.8s;
+    }   
+    .box_1 {   
+        z-index: 1;
+            -webkit-transform: translateY(0vh);
+                    transform: translateY(0vh);
+    }
+
+    .box_2 {  
+        z-index: 2;
+        -webkit-transform: translateY(100vh);
+                transform: translateY(100vh);
+    }
+
+    .box_3 {    
+        z-index: 3;
+        -webkit-transform: translateY(200vh);
+                transform: translateY(200vh);
+    }
+    .box_4 {
+        z-index: 4;
+        -webkit-transform: translateY(300vh);
+                transform: translateY(300vh);
+    }
+
+    .box_5 {
+        z-index: 5;
+        -webkit-transform: translateY(400vh);
+                transform: translateY(400vh);
+    }
+
+/* section1-------------------*/
+    .one .brown_square{
+      /* width:442px;
+      height:366px; */
+      width:28%;
+      height:44%;
+      background-color:#927C50;
+      position: absolute;
+      top:45%;
+      left:35%;
+      transform: translateY(-50%) rotate(-7deg); 
+      
+    }
+    .one .red_ball{
+      /* width:360px;
+      height:360px; */
+      width:23%;
+      padding-bottom:23%;
+      border-radius: 50%;
+      background-color: #852B21;
+      position: absolute;
+      top:40%;
+      right:30%;
+      /* transform: translateY(-50%); */
+    }
+    .one .girl{
+      position: absolute;
+      top:45%;
+      left:45%;
+      transform: translate(-50%,-50%);
+    }
+    .one .girl img{
+      height:90vh;
+    }
+    .one .boy{
+      position: absolute;
+      top:66%;
+      left:60%;
+      transform: translate(-50%,-50%);
+    }
+    .one .boy img{
+      height:65vh;
+    }
+
+    .one .tit_being{
+      position: absolute;
+      top:40%;
+      left:50%;
+      transform: translate(-50%,-50%);
+    }
+    .one .tit_being img{
+      width:432px;
+      
+    }
+
+    .one .tit_arts{
+      position: absolute;
+      top:65%;
+      left:55%;
+      transform: translate(-50%,-50%);
+    }
+    .one .tit_arts img{
+      width:346px;
+    }
+    .one .p{
+      position: absolute;
+      top:80%;
+      left:58%;
+      transform: translate(-50%,-50%);
+    }
+    .one .p p{
+      font-size: 28px;
+      color:#D7CFC0;
+    }
+/* section2-------------------*/
+    .two .brown_ball{
+      width:42%;
+      padding-bottom:42%;
+      border-radius: 50%;
+      background-color:#D7CFC0;
+      position: absolute;
+      top:53%;
+      left:75%;
+      transform: translate(-50%,-50%);
+    }
+    .two .brown_ball::after{
+      content: "";
+      width:100%;
+      padding-bottom:100%;
+      border-radius: 50%;
+      border:1px solid #CAAE81;
+      position: absolute;
+      top:47%;
+      left:47%;
+      transform: translate(-50%,-50%);
+    }
+    .two .red_square{
+      width:75%;
+      height:22%;
+      background-color: #852B21;
+      position: absolute;
+      top:50%;
+      left:0%;
+      transform: translateY(-50%);
+    }
+    .two .brown_long_square{
+      width:54%;
+      height:16%;
+      background-color: #947C50;
+      position: absolute;
+      top:49%;
+      right:0;
+      /* transform: translateX(-50%); */
+    }
+    .two .lace{
+      position: absolute;
+      top:32%;
+      left:80%;
+      transform: translate(-50%,-50%);
+    }
+    .two .lace img{
+      width:45vh;
+    }
+    .two .horse{
+      position: absolute;
+      top:50%;
+      left:75%;
+      transform: translate(-50%,-50%);
+    }
+    .two .horse img{
+      width:78vh;
+    }
+    .two .two_p{
+      position: absolute;
+      top:32%;
+      left:32%;
+      transform: translate(-50%,-50%);
+    }
+    .two .two_p p{
+      color:#832B21;
+      font-size: 20px;
+      line-height: 30px;
+    }
+    .two .goshop{
+        position: absolute;
+        top:67%;
+        left:64%;
+        transform: translate(-50%,-50%);
+    }
+    .two .goshop img{
+        width:55%;
+    }
+/* section3-------------------*/
+    .three .three_tit, .three .three_cont,
+    .three .three_btn, .three .three_btn_2{
+      position: absolute;
+    }
+    .three .three_tit{
+      top:28%;
+      left:72%;
+      transform: translate(-50%,-50%);
+    }
+    .three .three_cont{
+      top:50%;
+      left:80%;
+      transform: translate(-50%,-50%);
+    }
+    .three .three_btn{
+      top:70%;
+      left:85%;
+      transform: translate(-50%,-50%);
+    }
+    .three .three_btn_2{
+      top:80%;
+      left:86%;
+      transform: translate(-50%,-50%);
+    }
+    .three .three_tit p, .three .three_cont p,
+    .three .three_btn p, .three .three_btn_2 p{
+      font-size: 20px;
+      line-height: 28px;
+      letter-spacing: 3px;
+      color:#852B21;
+    }
+    .three .three_tit p{
+      font-size: 28px;
+      line-height: 35px;
+    }
+    .three .three_cont p{
+      color:#000;
+      font-size: 16px;
+      width:50vh;
+    }
+    .three .three_btn_2 p{
+      color:#947C50;
+    }
+    /* .three .p:nth-child(2) p{
+      color:#000;
+    } */
+    .three .brown_ball{
+      width:42%;
+      padding-bottom:42%;
+      border-radius: 50%;
+      background-color:#D7CFC0;
+      position: absolute;
+      top:53%;
+      left:32%;
+      transform: translate(-50%,-50%);
+    }
+    .three .brown_ball::after{
+      content: "";
+      width:100%;
+      padding-bottom:100%;
+      border-radius: 50%;
+      border:1px solid #CAAE81;
+      position: absolute;
+      top:47%;
+      left:54%;
+      transform: translate(-50%,-50%);
+    }
+    .three .red_square{
+      width:45%;
+      height:15%;
+      background-color: #852B21;
+      position: absolute;
+      top:45%;
+      left:0%;
+      transform: translateY(-50%);
+    }
+    .three .brown_long_square{
+      width:35%;
+      height:15%;
+      background-color: #947C50;
+      position: absolute;
+      top:54%;
+      left:42%;
+      transform: translate(-50%,-50%);
+    }
+    .three .new_event{
+      position: absolute;
+      top:15%;
+      left:15%;
+      transform: translate(-50%,-50%);
+    }
+    .three .new_event img{
+      width:30vh;
+    }
+    .three .new_event2{
+      position: absolute;
+      top:30%;
+      left:45%;
+      transform: translate(-50%,-50%);
+    }
+    .three .new_event2 img{
+      width:50vh;
+    }
+    .three .new_event_bar_table{
+      position: absolute;
+      left:2%;
+      bottom:0%;
+    }
+    .three .new_event_bar_table img{
+      width:85vh;
+    }
+    .three .new_event3{
+      position: absolute;
+      top:78%;
+      left:67%;
+      transform: translate(-50%,-50%);
+    }
+    .three .new_event3 img{
+      width:30vh;
+    }
+    .three .new_event4{
+      position: absolute;
+      top:75%;
+      left:54%;
+      transform: translate(-50%,-50%);
+    }
+    .three .new_event4 img{
+      width:40vh;
+    }
+/* section4-------------------*/
+    .four .brown_big_square{
+        width:80%;
+        height:62%;
+        background-color: #D9D1C2 ;
+        position: absolute;
+        top:55%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .four .white_frame{
+        width:78%;
+        height:58%;
+        border:1px solid #fff;
+        position: absolute;
+        top:55%;
+        left:50%;
+        transform: translate(-50%, -50%);
+    }
+    .four .red_big_ball{
+        width:23%;
+        padding-bottom:23%;
+        background-color: #852B21;
+        border-radius: 50%;
+        position: absolute;
+        top:66%;
+        left:16%;
+        transform: translate(-50%, -50%);
+    }
+    .four .borwn_square{
+        width:16%;
+        padding-bottom:16%;
+        background-color: #947C50;
+        position: absolute;
+        top:63%;
+        left:20%;
+    }
+    .four .david{
+        position: absolute;
+        top:38%;
+        left:29%;
+        transform: translate(-50%, -50%);
+    }
+    .four .david img{
+        width:80%;
+    }
+    .four .four_frame{
+        position: absolute;
+        top:41%;
+        left:10.8%;
+    }
+    .four .four_frame img{
+        width:23%;
+    }
+    .four .drink_underline{
+        width:40%;
+        height:1.3px;
+        background-color: #947C50;
+        position: absolute;
+        top:19%;
+        right:10%;
+    }
+    .four .drink1{
+        position: absolute;
+        top:2.7%;
+        left:71%;
+    }
+    .four .drink2{
+        position: absolute;
+        top:2.7%;
+        left:77%;
+    }
+    .four .drink3{
+        position: absolute;
+        top:4.7%;
+        left:83%;
+    }
+    .four .drink img{
+        width:20%;
+        
+    }
+    .four p{
+      line-height: 28px;
+      letter-spacing: 3px; 
+    }
+    .four .four_tit p{
+      font-size: 28px;
+      color:#852B21;
+    }
+    .four .four_cont p{
+      color:#000;
+      font-size: 16px;
+      width:84vh;
+    }
+    .four .four_tit{
+      position: absolute;
+      top:37%;
+      left:55%;
+      transform: translate(-50%,-50%);
+    }
+    .four .four_cont{
+      position: absolute;
+      top:55%;
+      left:64%;
+      transform: translate(-50%,-50%);
+    }
+    .four .four_bar{
+        width:160px;
+        height:160px;
+        overflow: hidden;
+        border-radius: 12px;
+        position: absolute;
+        bottom:3%;
+    }
+    .four .four_bar1{
+        right:7%;
+    }
+    .four .four_bar2{
+        right:19%;
+    }
+    .four .four_bar3{
+        right:31%;
+    }
+/* section5-------------------*/
+    .five .brown_ball{
+      width:22%;
+      padding-bottom:22%;
+      border-radius: 50%;
+      background-color:#D7CFC0;
+      position: absolute;
+      top:40%;
+      left:30%;
+      transform: translate(-50%,-50%);
+    }
+    .five .brown_ball::after{
+      content: "";
+      width:100%;
+      padding-bottom:100%;
+      border-radius: 50%;
+      border:1px solid #CAAE81;
+      position: absolute;
+      top:47%;
+      left:47%;
+      transform: translate(-50%,-50%);
+    }
+    .five .red_square{
+        width:72%;
+        height:22%;
+        background-color: #852B21;
+        position: absolute;
+        top:49%;
+        right:0%;
+        transform: translateY(-50%);
+      }
+      .five .brown_top_square{
+        width:54%;
+        height:16%;
+        background-color: #947C50;
+        position: absolute;
+        top:48%;
+        left:0;
+        /* transform: translateX(-50%); */
+      }
+      .five .man{
+          position: absolute;
+          top:30%;
+          left:40%;
+          transform: translate(-50%,-50%);
+
+      }
+      .five .man img{
+          width:45%;
+      }
+      .five p{
+      line-height: 28px;
+      letter-spacing: 3px; 
+    }
+    
+    .five .five_p p{
+      color:#D9D1C2;
+      font-size: 20px;
+      width:84vh;
+    }
+    
+    .five .five_p{
+      position: absolute;
+      top:55%;
+      left:95%;
+      transform: translate(-50%,-50%);
+    }
+    .five .paint_frame{
+        width:15%;
+        height:38%;
+        border:1px solid #947C50;
+        position: absolute;
+        top:25%;
+        left:50%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+    }
+    .five .paint img{
+        width:11%;
+        position: absolute;
+        top:25%;
+        left:50%;
+        transform: translate(-50%,-50%);
+    }
+    .five .paint_frame_2, .five .paint_2 img{
+        left:67.5%;
+    }
+    .five .paint_frame_3, .five .paint_3 img{
+        left:85%;
+    }
+    .five .paint_frame_big{
+        width:28%;
+        height:29%;
+        border:1px solid #947C50;
+        position: absolute;
+        top:70%;
+        left:20%;
+        transform: translate(-50%,-50%);
+        background-color: #fff;
+    }
+    .five .paint_frame_big::after{
+        content:"";
+        width:100%;
+        height:100%;
+        border:1px solid #D9D1C2;
+        position: absolute;
+        top:42%;
+        left:54%;
+        transform: translate(-50%,-50%);
+    }
+
+    .five .paint_big{
+        width:20%;
+        height:20%;
+        /* background-color: red; */
+        position: absolute;
+        top:69%;
+        left:20%;
+        transform: translate(-50%,-50%);
+        overflow: hidden;
+    }
+    
+    .five .paint_big img{
+        width:100%;
+    }
+    .five .five_p_2 p{
+      color:#947C50;
+      font-size: 20px;
+      line-height: 22px;
+      background: #fff;
+    }
+    
+    .five .five_p_2{
+      position: absolute;
+      top:82%;
+      left:28%;
+      transform: translate(-50%,-50%);
+    }
+    
+/* nav------------------------------------------ */
+        .nav{
+            padding:2px;
+            flex:1;
+            height:100vh;
+            position: fixed;
+            right:0;
+            background-color: white;
+            border-left:#D6CBBC 1px solid;
+            /* background: black; */
+            z-index: 99;
+        }
+        .nav ul li img{
+            width:30px;
+            margin:6px;
+        }
+        .nav_bottom{
+            position: absolute;
+            bottom:0;
+        }
+        a.n_bag{
+          position: relative;  
+        }
+        span.badge{
+           background-color: #967E53;
+           width:20px;
+           height:20px;
+           border-radius: 50%; 
+           color:white;
+           position: absolute;
+           right:0;
+           bottom:5px;
+           text-align: center;
+           line-height: 20px;
+           letter-spacing: 0;
+           font-size: 14px;
+          
+        }
+/* nav_notice---------------*/
+        .nav ul.nav_top li{
+            position: relative;
+        }
+        .nav_top p::after{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #947C50;
+            width: 6px;
+            height: 10px;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            opacity: 0;
+            transition: none;
+            right:-6px;
+            top:8px;
+        }
+        
+        .nav_top p{
+            position: absolute;
+            display: block;
+            padding: 5px 0;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            background-color: #947C50;
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            text-transform: none;
+            text-indent: 0;
+            opacity: 0;
+            transition: none;
+            height:25px;
+        }
+        
+        .nav_top .ham p{
+            left:-88px;
+            top:10px;
+            width: 80px; 
+        }
+        .nav_top li .login p{
+            left:-60px;
+            top:10px;
+            width: 50px; 
+        }
+        .nav_top li .member p{
+            left:-90px;
+            top:10px;
+            width: 80px; 
+        }
+        .nav_top .shop p{
+            left:-73px;
+            top:90px;
+            width: 65px; 
+        }
+        .nav_top .love p{
+            left:-58px;
+            top:130px;
+            width: 50px; 
+        }
+        .nav_top .space p{
+            left:-88px;
+            top:180px;
+            width: 80px; 
+        }
+        
+        .nav ul.nav_top li.ham:hover+.ham p{
+            opacity: 1;
+        }
+        .nav ul.nav_top li.login:hover .login p{
+            opacity: 1;
+        }
+        .nav ul.nav_top li.member:hover .member p{
+            opacity: 1;
+        }
+        .nav ul.nav_top li.shop:hover+.shop p{
+            opacity: 1;
+        }
+        .nav ul.nav_top li.love:hover+.love p{
+            opacity: 1;
+        }
+        .nav ul.nav_top li.space:hover+.space p{
+            opacity: 1;
+        }
+       
+        .nav ul.nav_top li.ham:hover+.ham p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_top li.login:hover .login p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_top li.member:hover .member p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_top li.shop:hover+.shop p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_top li.love:hover+.love p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_top li.space:hover+.space p::after{
+            opacity: 1;    
+        }
+
+        /**/
+        .nav ul.nav_bottom li{
+            position: relative;
+        }
+        .nav_bottom p::after{
+            content: "";
+            display: block;
+            position: absolute;
+            background: #947C50;
+            width: 6px;
+            height: 10px;
+            clip-path: polygon(0 0, 100% 50%, 0 100%);
+            opacity: 0;
+            transition: none;
+            right:-6px;
+            top:8px;
+        }
+        
+        .nav_bottom p{
+            position: absolute;
+            display: block;
+            padding: 5px 0;
+            border-radius: 4px;
+            -moz-border-radius: 4px;
+            -webkit-border-radius: 4px;
+            background-color: #947C50;
+            color: #fff;
+            font-weight: 400;
+            font-size: 14px;
+            text-align: center;
+            text-transform: none;
+            text-indent: 0;
+            opacity: 0;
+            transition: none;
+            height:25px;
+        }
+        .nav_bottom .share p{
+            left:-60px;
+            top:12px;
+            width: 50px;    
+        }
+        .nav_bottom .locat p{
+            left:-90px;
+            top:55px;
+            width: 80px; 
+        }
+        .nav ul.nav_bottom li.share:hover+.share p{
+            opacity: 1;
+        }
+        .nav ul.nav_bottom li.locat:hover+.locat p{
+            opacity: 1;
+        }
+        .nav ul.nav_bottom li.share:hover+.share p::after{
+            opacity: 1;    
+        }
+        .nav ul.nav_bottom li.locat:hover+.locat p::after{
+            opacity: 1;    
+        }
+
+       
+/* locat------------------------------------------ */
+        .back_black{
+            background-color: transparent;
+            position: fixed;
+            top: 0;
+            left: 0;
+            height: 100%;
+            width: 100%;
+            visibility: hidden;
+            transition: all .8s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+            z-index: 1;
+        }
+        
+        .location{
+            margin-top:60px;
+            margin-left:66px;
+            padding:25px;
+            width: calc(100% - 113px);
+            height: 87%;
+            background: #DCD2C4;
+            position: fixed;
+            z-index: 2;
+            transform: translateX(2000px);
+		    transition: all 1.65s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+            box-shadow:  0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+            
+        }
+        .frame{
+            width:97%;
+            height:95%;
+            border:1px solid #947C50;
+            position: absolute;
+            top:50%;
+            left:50%;
+            transform: translate(-50%, -50%);
+            /* background: green; */
+            z-index: 3;
+        } 
+        .locat_tit{
+            justify-content: center;
+            align-items: center;
+            /* background-color: red; */
+            margin-top:3%;
+        }
+        .locat_tit p{
+            font-size: 26px;
+        } 
+        .locat_tit img{
+            width:40px;
+            height:40px;
+            margin:10px;
+        }  
+        .locat_open {
+            transform: translateX(0px);
+		    transition: transform .8s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        }  
+        .locatt {
+            -webkit-transition: 0.1s -webkit-transform linear;
+            transition: 0.1s -webkit-transform linear;
+            transition: 0.1s transform linear;
+            transition: 0.1s transform linear, 0.1s -webkit-transform linear;
+            position: relative;
+            background: 0;
+            /* margin: 2rem; */
+            height: 40px;
+            width: 46px;
+            z-index: 1;
+            outline: 0;
+            padding: 0;
+            border: 0;
+            /* background-color: red; */
+            cursor: pointer;
+		}
+        .white{
+            background-color: white;
+            position: absolute;
+            z-index: 2;
+            width:0%;
+            height:100%;
+            right:0;
+            bottom:0;
+            box-shadow:  0 1px 4px rgba(0, 0, 0, 0.27), 0 0 40px rgba(0, 0, 0, 0.06) inset;
+            transition: all 1s cubic-bezier(0.63, 0.07, 0.26, 0.93);
+            }
+        .white_open{
+            /* animation: width 1s  ease .8s  alternate; */
+            animation-fill-mode:forwards;
+            transition: all 2s cubic-bezier(0.63, 0.07, 0.26, 0.93);
+            width:33%;
+        }
+        .traffic.text_open, .contact.text_open{
+            /* animation: opacity 1.5s  ease 2s  alternate; */
+            animation-fill-mode:forwards;
+            transition: all 3s cubic-bezier(0.63, 0.07, 0.26, 0.93);
+            opacity: 1;
+            z-index: 2;
+        }
+        .body_black{
+            background-color: rgba(0,0,0,.8);
+            visibility: visible;
+            z-index: 1;
+        }
+
+        .locat_info{
+            margin-top:4%;
+        }
+        .traffic{
+            width:70%;
+            height:100%;
+            /* background: red; */
+            opacity: 0;
+            transition: all 1.2s cubic-bezier(0.63, 0.07, 0.26, 0.93);
+            /* background-color: blue; */
+            z-index: 2;
+        }
+    
+        .traffic iframe{
+            margin:25px;
+        }
+        .traffic_text{
+            width:60%;
+            margin-left:20px;
+        }
+        .contact{
+            width:30%;
+            opacity: 0;
+            height:100%;
+            /* background: blue; */
+            z-index: 2;
+            transition: all 1.2s cubic-bezier(0.63, 0.07, 0.26, 0.93);
+        }
+        .locat_info p{
+            line-height: 32px;
+        }
+        .contact p:nth-child(1),.traffic p:nth-child(1){
+            font-size: 24px;
+            color:#852B21;
+            line-height: 50px;
+            margin-left:0;
+        }
+        .traffic p:nth-child(2),.traffic p:nth-child(5){
+            font-size: 18px;
+            line-height: 40px;
+            margin-left:0;
+        }
+        .traffic p:nth-child(3),.traffic p:nth-child(4),.traffic p:nth-child(6),.traffic p:nth-child(7),
+        .contact p:nth-child(2),.contact p:nth-child(3),.contact p:nth-child(4){
+            margin-left:30px;
+        }
+        
+
+/* map------------------------------------------ */
+        .menu {
+		-webkit-transition: 0.1s -webkit-transform linear;
+		transition: 0.1s -webkit-transform linear;
+		transition: 0.1s transform linear;
+		transition: 0.1s transform linear, 0.1s -webkit-transform linear;
+		position: relative;
+		background: 0;
+		/* margin: 2rem; */
+		height: 30px;
+		width: 30px;
+		z-index: 1;
+		outline: 0;
+		padding: 0;
+		border: 0;
+		/* background-color: red; */
+		}
+
+		 .bar::before, .bar::after {
+		-webkit-transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s -webkit-transform linear;
+		transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s -webkit-transform linear;
+		transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear;
+		transition: 0.2s background linear 0.1s, 0.2s top linear 0.2s, 0.2s transform linear, 0.2s -webkit-transform linear;
+		position: absolute;
+		background:url("imgs/icon/ham_15px_1.svg");
+		background-size: cover;
+		position: absolute;
+		content: url("");
+		display: flex;
+		width: 30px;
+		height:15px;
+		top: 50%;
+		left: 0;
+		}
+		
+		.bar{
+			width: 40px;
+			height: 30px;
+			display: block;
+			position: relative;
+			/* background-image: url("imgs/icon/ham_30px_1.png"); */
+			box-sizing: border-box;
+			z-index: 50;
+		}
+		
+		.bar::before {
+		    top: 0.4rem;
+            left:.3rem;
+		}
+		.bar::after {
+		    top: 1rem;
+            left:.3rem;
+		}
+		.bar::before, .bar::after {
+				transform: rotate(0deg);
+		}
+		
+		.active .bar::before {
+		-webkit-transform: rotate(45deg);
+				transform: rotate(45deg);
+		}
+		.active .bar::after {
+		-webkit-transform: rotate(-45deg);
+				transform: rotate(-45deg);
+		}
+		.active .bar::before, .active .bar::after {
+		top: 8px;
+		}
+		.active .bar, .active .bar::before, .active .bar::after {
+		-webkit-transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s -webkit-transform linear 0.2s;
+		transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s -webkit-transform linear 0.2s;
+		transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s;
+		transition: 0.2s background linear 0.1s, 0.2s top linear, 0.2s transform linear 0.2s, 0.2s -webkit-transform linear 0.2s;
+		}
+        .map li.map_pic{
+            width:160px;
+            height:106px;
+            /* background-color: red; */
+            position: relative;
+            margin:10px 0;
+        }
+        .map .pic{
+            width:160px;
+            height:96px;
+            top:50%;
+            transform: translateY(-50%);
+            left:0;
+            /* background-color: green; */
+            position: absolute;
+            overflow: hidden;
+        }
+        .map li.pic img.scale{
+            width:160px;
+            height:106px;
+            position: absolute;
+            top:0px;
+            left:0;
+        }
+        .map_tit{
+            color:#852b21; 
+            margin-top:50px;
+        }
+        .map{
+            margin-top:60px;
+            /* margin-bottom:42px; */
+            padding:25px;
+            width: 270px;
+            height: 87%;
+            background: #DCD2C4;
+            position: fixed;
+            padding-top: 190px;
+            border-style:solid;
+            border-width: 0 2px 0 0;
+            border-image: linear-gradient(to top, #967E53 0%,transparent 100%);
+            border-image-slice: 1;
+            z-index: 2;
+		}
+		.map1{
+		transform: translateX(2000px);
+		transition: transform 1.65s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        .map1:hover .num{
+            transform: translateY(20px);
+        }
+        .map1:hover img.scale{
+            transform: scale(1.1);
+            top:0px;
+        }
+        .map1:hover .pic{
+            height:104px;   
+        }
+		.map2{
+		transform: translateX(2250px);
+		transition: transform 1.6s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        .map2:hover .num{
+            transform: translateY(20px);
+        } 
+        .map2:hover img.scale{
+            transform: scale(1.1);
+            top:0px;
+        }
+        .map2:hover .pic{
+            height:104px;   
+        }
+		.map3{
+		transform: translateX(3000px);
+		transition: transform 1.5s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        .map3:hover .num{
+            transform: translateY(20px);
+        } 
+        .map3:hover img.scale{
+            transform: scale(1.1);
+            top:0px;
+        }
+        .map3:hover .pic{
+            height:104px;   
+        }
+		.map4{
+		transform: translateX(3500px);
+		transition: transform 1.4s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        .map4:hover .num{
+            transform: translateY(20px);
+        } 
+        .map4:hover img.scale{
+            transform: scale(1.1);
+            top:0px;
+        }
+        .map4:hover .pic{
+            height:104px;   
+        }
+		.map5{
+		transform: translateX(3750px);
+		transition: transform 1.1s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        .map5:hover .num{
+            transform: translateY(20px);
+        } 
+        .map5:hover img.scale{
+            transform: scale(1.1);
+            top:0px;
+        }
+        .map5:hover .pic{
+            height:104px;   
+        }
+		
+		.menu-open .map1 {
+		transform: translateX(66px);
+		transition: transform .8s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+        
+		.menu-open .map2 {
+		transform: translateX(336px);
+		transition: transform 1.1s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+		.menu-open .map3 {
+		transform: translateX(606px);
+		transition: transform 1.2s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+		.menu-open .map4 {
+		transform: translateX(876px);
+		transition: transform 1.3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+		.menu-open .map5 {
+		transform: translateX(1146px);
+		transition: transform 1.35s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+		}
+
+		nav.map ul {
+		margin: 0;
+		list-style: none;
+		padding:0;
+	
+		}
+		nav.map ul li {
+		padding: 6px 5px;
+		font-size: 16px;
+		
+		}
+		.map ul li img{
+			width:160px;
+		}
+		.map ul li img.num{
+			width:90px;
+			
+		}
+		nav{
+			cursor: pointer;
+		}
+
+
+		nav.map ul li a:hover {
+		    color:#603813;
+            letter-spacing: 5px;
+		}
+		.map5{
+			display: flex;
+			width:400px;
+			border-right: none;
+			justify-content: space-between;
+		}
+		
+		ul.map5_icon li img{
+			width:30px;
+			height:30px;
+			margin-left:80px;	
+		}
+		ul.map5_icon li img:hover{
+			filter: brightness(40%);
+		}
+		.phone_ham{
+			display: none;
+		}
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+/*-------------------------------------------------*/
+@media screen and (max-width: 420px){
+        li.map_num ,li img.num, .pic{
+            display: none;
+        }
+        nav.map ul li.map_tit{
+            margin-top:14px;
+            width:140px;
+        }
+        nav.map ul li{
+            font-size: 20px;
+            padding: 3px 5px;
+        }
+		nav.map{
+            width: 328px;
+		    height: 20%;
+            margin:0;
+            padding:0 ;
+            border:none;   
+        }
+        .map li a{
+            color:#947C50;
+            /* color:#603813; */
+            font-size: 16px;
+        }
+        .map li.map_pic{
+            width:100px;
+            height:20px;
+            /* background-color: green; */
+            position:none;
+        }
+        .map ul{
+            display: flex;
+            flex-wrap: wrap;
+            align-items: center;
+        }
+        .map ul li{
+            margin-top:0px;
+            margin-left:10px;
+            height:30px;
+            width:90px;
+        }
+        .map2 ul li{
+            width:130px;
+        }
+        .map5 ul li{
+            width:200px;
+        }
+        .map5 li.map_pic{
+            display: none;
+        }
+        ul.map5_icon{
+            display: block;
+        }
+        ul.map5_icon li{
+            position: absolute;
+            bottom:7px;
+            left:0;
+        }
+        ul.map5_icon li img.fb{
+            margin-left: 105px;
+        }
+        ul.map5_icon li img.line{
+            margin-left: 145px;
+        }
+        ul.map5_icon li img.ig{
+            margin-left: 185px;
+        }
+        
+		.map1{
+		transform: translateY(667px);
+		transition: transform 1.4s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        
+		}
+        .map2{
+		transform: translateY(800.4px);
+		transition: transform 1.3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        
+		}
+        .map3{
+		transform: translateY(933.8px);
+		transition: transform 1.2s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        
+		}
+        .map4{
+		transform: translateY(1067.2px);
+		transition: transform 1.1s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        
+		}
+        .map5{
+		transform: translateY(2267.8px);
+		transition: transform .89s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+        flex-direction: column;
+		}
+        
+        .menu-open .map1 {
+		transform: translateY(0);
+		transition: transform .8s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+        }
+        .menu-open .map2 {
+		transform: translateY(100%);
+		transition: transform 1.1s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+        }
+        .menu-open .map3 {
+		transform: translateY(200%);
+		transition: transform 1.2s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+        }
+        .menu-open .map4 {
+		transform: translateY(300%);
+		transition: transform 1.3s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+        }
+        .menu-open .map5 {
+		transform: translateY(400%);
+		transition: transform 1.35s cubic-bezier(0.56, 0.1, 0.34, 0.91);
+	
+        }
+         .map ul li a{
+           left:0;
+        }
+        .map_tit{
+            width:328px;
+            height:20px;
+       } 
+
+    /*----home------*/
+       .home_wrap{
+           position: fixed;
+       }
+       .phone_none{
+           display: none;
+       }
+       /* section1--------*/
+       .one .brown_square{
+        width:65%;
+        height:30%;
+        top:37%;
+        left:42%;
+        transform: translate(-50%,-50%) rotate(-7deg); 
+       }
+       .one .red_ball{
+        width:60%;
+        padding-bottom:60%;
+        right:5%;
+        top:32%
+        }
+        .one .girl img{
+        height:65vh;
+        }
+        .one .girl{
+        left:35%;
+        }
+        
+        .one .boy img{
+        height:45vh;
+        }
+        .one .boy{
+        left:75%;
+        top: 58%;
+        }
+        .one .tit_being img {
+        width: 140%;
+        }
+        .one .tit_being {
+        top: 38%;
+        left: 38%;
+        }
+        .one .tit_arts img {
+        width: 120%;
+        
+        }
+        .one .tit_arts {
+        left: 45%;
+        top:59%;
+        }
+        .one .p {
+            width: 100%;
+            top: 85%;
+            left: 70%;
+        }
+        .one .p p{
+        font-size: 24px;
+        color:#333;
+        }
+        /* section2--------*/
+        .two .brown_ball {
+            width: 90%;
+            padding-bottom: 90%;
+            top: 68%;
+            left:64%;
+        }
+        .two .horse img{
+            width:40vh;
+        }
+        .two .horse {
+            top: 70%;
+            left: 64%;
+        }
+        .two .red_square {
+            height: 12%;
+            top: 70%;
+        }
+        .two .brown_long_square {
+            width: 86%;
+            height: 10%;
+            top: 70%;
+        }
+        .two .lace {
+            top: 55%;
+            left: 70%;
+        }
+        .two .lace img {
+            width: 30vh;
+        }
+        .two .goshop img {
+            width: 70%;
+        }
+        .two .goshop {
+            top: 94%;
+            left: 36%;
+        }
+        .two .two_p {
+            top: 22%;
+            left: 10%;
+            transform: translate(0,0);
+        }
+        .two .two_p p {
+            font-size: 20px;
+            width: 70%;
+        }
+        /* section3--------*/
+        .three .new_event {
+            top: 6%;
+            left: 15%;
+        }
+        .three .new_event img {
+            width: 14vh;
+        }
+        .three .three_tit {
+            top: 4%;
+            left: 31%;
+            transform: translate(0,0);
+        }
+        .three .three_tit p {
+            font-size: 20px;
+        }
+        .three .three_cont p {
+            width: 40vh;
+        }
+        .three .three_cont {
+            top: 36%;
+            left: 45%;
+        }
+        .three .new_event_bar_table {
+            bottom: -4%;
+        }
+        .three .new_event_bar_table img {
+            width: 35vh;
+        }
+        .three .new_event4 img {
+            width: 23vh;
+        }
+        .three .new_event4 img {
+            width: 18vh;
+        }
+        .three .new_event4 {
+            top: 70%;
+            left: 17%;
+        }
+        .three .new_event3 img {
+            width: 14vh;
+        }
+        .three .new_event3 {
+            top: 74%;
+            left: 38%;
+        }
+        .three .brown_ball {
+            width: 62%;
+            padding-bottom: 62%;
+            top: 91%;
+            left: 53%;
+        }
+        .three .red_square {
+            width: 70%;
+            height: 9%;
+            top: 84%;
+        }
+        .three .brown_long_square {
+            width: 70%;
+            height: 8%;
+            top: 89%;
+            left: 67%;
+        }
+        .three .three_btn {
+            top: 62%;
+            left: 40%;
+            transform: translate(0,0);
+        }
+        .three .three_btn p, .three .three_btn_2 p {
+            font-size: 18px;
+        }
+        .three .three_btn_2 {
+            top: 67%;
+            left: 51%;
+            transform: translate(0,0);
+        }
+        .three .new_event2 img {
+            width: 25vh;
+        }
+        .three .new_event2 {
+            top: -89%;
+            left: 20%;
+        }
+        /* section4--------*/
+        .four .four_tit p {
+            font-size: 20px;
+            width: 75%;
+        }
+        .four .four_tit {
+            top: 3%;
+            left: 5%;
+            transform: translate(0,0);
+        }
+        .four .brown_big_square {
+            width: 77%;
+            height: 60%;
+            top: 15%;
+            left: 5%;
+            transform: translate(0,0);
+        }
+        .four .white_frame {
+            width: 72%;
+            height: 58%;
+            top: 16%;
+            left: 7%;
+            transform: translate(0,0);
+        }
+        .four .four_cont {
+            top: 18%;
+            left: 11%;
+            transform: translate(0,0);
+        }
+        .four .four_cont p {
+            width: 75%;
+        }
+        .four .four_bar3 {
+            right: 18%;
+            top: 38%;
+        }
+        .four .borwn_square {
+            width: 22%;
+            padding-bottom: 22%;
+            top: 88%;
+            left: 22%;
+        }
+        .four .red_big_ball {
+            width: 32%;
+            padding-bottom: 32%;
+            top: 87%;
+            left: 16%;
+        }
+        .four .david {
+            top: 74%;
+            left: 40%;
+        }
+        .four .david img {
+            width: 60%;
+        }
+        .four .four_frame {
+            top: 78%;
+            left: 9%;
+        }
+        .four .four_frame img {
+            width: 28%;
+        }
+        .four .four_bar1 {
+            right: 15%;
+            top: 42%;
+        }
+        .four .drink3 {
+            top: 4%;
+            left: 73%;
+        }
+        .four .drink img {
+            width: 35%;
+        }
+        /* section5--------*/
+        .five .paint_frame_big {
+            width: 69%;
+            height: 22%;
+            border: 1px solid #D9D1C2;
+            top: 3%;
+            left: 15%;
+            transform: translate(0,0);
+            background-color: transparent;
+        }
+        .five .paint_frame_big::after{
+            display: none;
+        }
+        .five .paint_big {
+            width: 54%;
+            height: 16%;
+            top: 13%;
+            left: 53%;
+        }
+        .five .brown_top_square {
+            width: 100%;
+            height: 9%;
+            top: 23%;
+            transform: translateX(0%);
+        }
+        .five .red_square {
+            width: 72%;
+            height: 9%;
+            top: 31%;
+            z-index: 1;
+        }
+        .five .five_p_2 {
+            top: 28%;
+            left: 48%;
+            transform: translate(0,0);
+            z-index: 1;
+        }
+        .five .five_p_2 p {
+            color: #D9D1C2;
+            font-size: 20px;
+            line-height: 22px;
+            background:transparent;
+        }
+        .five .brown_ball {
+            width: 90%;
+            padding-bottom: 90%;
+            top: 85%;
+            left: 20%;
+        }
+        .five .man {
+            top: 85%;
+            left: 30%;
+        }
+        .five .man img {
+            width: 75%;
+        }
+        .five .five_p {
+            top: 40%;
+            left: 80%;
+        }
+        .five .five_p p {
+            color: #852B21;
+            font-size: 18px;
+        }
+        .five .paint_frame {
+            width: 45%;
+            height: 20%;
+            top: 57%;
+            left: 60%;
+        }
+        .five .paint_frame_2 {
+            left: 60%;
+            top: 80%;
+        }
+        .five .paint img {
+            width: 25%;
+            top: 57%;
+            left: 63%;
+        }
+        .five .paint_2 img{
+            left: 63%;
+            top: 80%;
+        }
+}
+
+    </style>
+</head>
+<!-- <body><div class="back_black"></div> -->
+    <!-- home -->
+    <div class="home one">
+      <div class="home_wrap">
+
+        <div class="section one box box_1">
+            <div class="brown_square"></div>
+            <div class="red_ball"></div>
+            <div class="girl"><img src="imgs/home/girl.png" alt=""></div>
+            <div class="tit_being"><img src="imgs/home/being.svg" alt=""></div>
+            <div class="boy"><img src="imgs/home/boy.png" alt=""></div>
+            <div class="tit_arts"><img src="imgs/home/arts.svg" alt=""></div>
+            <div class="p"><p>台灣第一家繪畫酒吧</p></div>
+        </div>
+
+        <div class="section two box box_2 under">
+            <div class="brown_ball"></div>
+            <div class="red_square"></div>
+            <div class="brown_long_square"></div>
+            <div class="lace"><img src="imgs/home/lace.png" alt=""></div>
+            <div class="horse"><img src="imgs/home/horse.png" alt=""></div>
+            <div class="two_p"><p>在藝術商店尋找靈感，用藝術豐富生活</p></div>
+            <div class="goshop"><img src="imgs/home/goshop.png" alt=""></div>
+        </div>
+
+        <div class="section three box box_3 under">
+            <div class="brown_ball"></div>
+            <div class="red_square"></div>
+            <div class="brown_long_square"></div>
+            <div class="new_event"><img src="imgs/home/new_event.png" alt=""></div>
+            <div class="new_event2"><img src="imgs/home/new_event_2.png" alt=""></div>
+            <div class="new_event_bar_table"><img src="imgs/home/new_event_bar_table.png" alt=""></div>
+            <div class="new_event4"><img src="imgs/home/new_event_4.png" alt=""></div>
+            <div class="new_event3"><img src="imgs/home/new_event_3.png" alt=""></div>
+            <div class="three_tit"><p>杯墊創作票選活動</p></div>
+            <div class="three_cont"><p>為了慶祝Being Arts藝術酒吧開幕兩周年，周年慶期間，特別舉辦了杯墊創作活動，每個來店裡創作的朋友都能投稿自己的作品。人氣最高的作品，將成為藝術酒吧未來一年中，提供給顧客們的杯墊，而作者也能免費帶回一幅自己喜愛的複製畫。</p></div>
+            <div class="three_btn"><p>去票選最愛的創作</p></div>
+            <div class="three_btn_2"><p>了解藝術酒吧</p></div>
+        </div>
+
+        <div class="section four box box_4 under">
+            <div class="brown_big_square"></div>
+            <div class="white_frame"></div>
+            <div class="red_big_ball"></div>
+            <div class="borwn_square"></div>
+            <div class="david"><img src="imgs/home/home_bar_man_brush.png" alt=""></div>
+            <div class="four_frame"><img src="imgs/home/four_frame.png" alt=""></div>
+            <div class="drink_underline phone_none"></div>
+            <div class="drink drink1 phone_none"><img src="imgs/home/drink1.png" alt=""></div>
+            <div class="drink drink2 phone_none"><img src="imgs/home/drink2.png" alt=""></div>
+            <div class="drink drink3"><img src="imgs/home/drink3.png" alt=""></div>
+            <div class="four_tit"><p>到酒吧裡揮灑創作能量，享受藝術生活</p></div>
+            <div class="four_cont"><p>複合式的藝術空間，秉持著推廣藝術的理念成立，希望提供每個來到藝術吧的朋友，可以更輕易享受藝術。</p></div>
+            <div class="four_bar four_bar1"><img src="imgs/home/home_bar_2.jpg" alt=""></div>
+            <div class="four_bar four_bar2 phone_none"><img src="imgs/home/home_bar_3.jpg" alt=""></div>
+            <div class="four_bar four_bar3 phone_none"><img src="imgs/home/home_bar_1.jpg" alt=""></div>
+        </div>
+
+        <div class="section five box box_5 under">
+            <div class="brown_ball"></div>
+            <div class="red_square"></div>
+            <div class="brown_top_square"></div>
+            <div class="man"><img src="imgs/home/five_man.png" alt=""></div>
+            <div class="five_p"><p>康丁斯基複製畫  限量特賣中</p></div>
+            <div class="paint_frame"></div>
+            <div class="paint_frame paint_frame_2"></div>
+            <div class="paint_frame paint_frame_3 phone_none"></div>
+            <div class="paint"><img src="imgs/home/paint_small_1.jpg" alt=""></div>
+            <div class="paint paint_2"><img src="imgs/home/paint_small_2.jpg" alt=""></div>
+            <div class="paint paint_3 phone_none"><img src="imgs/home/paint_small_3.jpg" alt=""></div>
+            <div class="paint_frame_big"></div>
+            <div class="paint_big"><img src="imgs/home/paint_big.jpg" alt=""></div>
+            <div class="five_p_2"><p>康丁斯基特展</p></div>
+        </div>
+
+      </div>
+    </div>
+
+    
+    <!-- nav -->
+    <div class="nav">
+            <ul class="nav_top">
+                <li class="ham">
+                    <button class="js-menu menu" type="button">
+                        <span class="bar"></span>
+                    </button>   
+                </li>
+                <div class="ham"><p>網站地圖</p></div>
+                <li class="login member"><a href="edit.html" type="button"><img src="imgs/icon/member_30px.svg" alt="會員"  title=""></a><div class="member"><p>會員中心</p></div><div class="login"><p>登入</p></div></li>
+                
+                
+                <li class="shop"><a class="n_bag" href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="購物袋"  title="">
+                    <span class="badge">20</span></a></li>
+                <div class="shop"><p>購物袋</p></div>
+                <li class="love"><a href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="收藏"  title=""></a></li>
+                <div class="love"><p>收藏</p></div>
+                <li class="space"><a href="" type="button"><img src="imgs/icon/game_30px.svg" alt="互動"  title=""></a></li>
+                <div class="space"><p>空間比對</p></div>
+            </ul>
+
+            <ul class="nav_bottom">
+                
+                <li class="share"><a href=""  type="button"><img src="imgs/icon/share_30px.svg" alt="分享"  title=""></a></li>
+                <div class="share"><p>分享</p></div>
+                <li class="locat "><button class="locatt" type="button"><a href="" type="button"><img style="pointer-events: none;" src="imgs/icon/map_30px.svg" alt="交通資訊"  title=""></a></button></li>
+                <div class="locat"><p>交通資訊</p></div>
+            </ul>
+    </div> 
+    <!-- location -->
+<div class="location">
+        <div class="frame"></div>
+        <div class="white"></div>
+        <div class="locat_tit flex">
+            <img src="imgs/locat/bg.svg" alt="">
+            <p>Being Arts 藝術吧</p>
+        </div>
+
+        <div class="locat_info flex">
+
+            <div class="traffic flex">
+                <iframe width='200px' height='250px' frameborder='0' scrolling='no' marginheight='0' marginwidth='0' src='http://maps.google.com.tw/maps?f=q&hl=zh-TW&geocode=&q=台北市中山區北安路534號&z=16&output=embed&t='></iframe>
+                <div class="traffic_text">
+                    <p>交通資訊</p>
+                    <p>捷運</p>
+                    <p>文湖線：大直站2號出口左轉北安路步行約5分鐘。</p>
+                    <p>淡水線：圓山站1號出口轉乘21、208、247、287、紅2至「捷運大直站」。</p>
+                    <p>板南線：忠孝復興站轉乘捷運文湖線（往南港展覽館）至大直站2號出口。</p>
+                    <p>公車</p>
+                    <p>至北安路「捷運大直站」公車路線：21、28、33、42、208、256、267、287、646、902、紅3、棕13、棕16。</p>
+                </div>
+            </div>
+            <div class="contact">
+                <div>
+                    <p>聯絡資訊</p>
+                    <p>地址：台北市中山區北安路534號</p>
+                    <p>電話：02-2355-8888</p>
+                    <p>電子郵件：being_arts@ba.com.tw</p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <!-- map -->
+        <!-- <nav class="map map1">
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/01.svg" alt=""></li> 
+                <li class="map_tit">線上商店</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/onlineshop.png" alt=""></li>
+                <li ><a href="">複製畫</a></li>
+                <li><a href="">雕塑品</a></li>
+                <li><a href="">文創商品</a></li>
+                <li><a href="">展覽專區</a></li>
+                <li><a href="">美術用品</a></li>
+                
+            </ul>
+        </nav>
+        <nav class="map map2" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/02.svg" alt=""></li>
+                <li class="map_tit">藝術酒吧</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/paintingbar.png" alt=""></li>
+                <li><a href="">空間簡介</a></li>
+                <li><a href="">餐點與飲品</a></li>
+                <li><a href="">畫具租借說明</a></li>
+                <li><a href="">繪畫課程</a></li>
+                
+            </ul>
+        </nav>
+        <nav class="map map3" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/03.svg" alt=""></li>
+                
+                <li class="map_tit">了解BA</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/aboutba.png" alt=""></div></li>
+                <li><a href="">品牌故事</a></li>
+                <li><a href="">交通資訊</a></li>                                
+                <li><a href="">追蹤我們</a></li>
+                <li><a href="">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <nav class="map map4">
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/04.svg" alt=""></li>
+                <li class="map_tit">當期展覽</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/exhibition.png" alt=""></li>
+                <li><a href="">當期展覽</a></li>
+                <li><a href="">展覽回顧</a></li>
+            </ul>
+        </nav>
+        <nav class="map map5" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/05.svg" alt=""></li>
+                <li class="map_tit">最新活動</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/monthly.png" alt=""></li>
+                <li><a href="">杯墊創作票選活動</a></li>
+            </ul>
+            <ul class=" map5_icon">
+                <li><a href=""><img class="fb" src="imgs/icon/fb_20px.svg" alt=""></a></li>
+                <li><a href=""><img class="line" src="imgs/icon/line_20px.svg" alt=""></a></li>
+                <li><a href=""><img class="ig" src="imgs/icon/ig_20px.svg" alt=""></a></li>
+            </ul>
+        </nav> -->
+        <script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+            <!-- <script src="lib/jquery-mousewheel-master/jquery.mousewheel.min.js"></script> -->
+        <script>
+        /* ham */
+		var isActive = false;
+
+        $('.js-menu').on('click', function() {
+            if (isActive) {
+                $(this).removeClass('active');
+                $('body').removeClass('menu-open');
+                $('.back_black').removeClass('body_black');
+            } else {
+                $(this).addClass('active');
+                $('body').addClass('menu-open');
+                $('.back_black').addClass('body_black');
+            }
+            isActive = !isActive;
+        });
+
+
+         /* location */
+		var isActive = false;
+
+        $('.locatt').on('click', function() {
+            if (isActive) {
+                $('.location').removeClass('locat_open');
+                $('.back_black').removeClass('body_black');
+                $('.white').removeClass('white_open');
+                $('.contact').removeClass('text_open');
+                $('.traffic').removeClass('text_open');
+                
+            } else {
+                $('.location').addClass('locat_open');
+                $('.back_black').addClass('body_black');
+                $('.white').addClass('white_open');
+                $('.contact').addClass('text_open');
+                $('.traffic').addClass('text_open');
+                
+            }
+            isActive = !isActive;
+        });
+
+      
+        /* fullpage */
+        function hasClass(el, className) {
+        if (el.classList)
+            return el.classList.contains(className);
+        else
+            return !!el.className.match(new RegExp('(\\s|^)' + className + '(\\s|$)'));
+        }
+
+        function addClass(el, classNames) {
+        classNames = classNames.split(' ')
+        if (el.classList)
+            classNames.forEach((classname) => el.classList.add(classname))
+        else if (!hasClass(el, className))
+            classNames.forEach((classname) => el.className += " " + classname)
+        }
+
+        function removeClass(el, className) {
+        if (el.classList)
+            el.classList.remove(className);
+        else if (hasClass(el, className)) {
+            var reg = new RegExp('(\\s|^)' + className + '(\\s|$)');
+            el.className = el.className.replace(reg, ' ');
+        }
+        }
+
+        ;(function() {
+        let lastAnimation = 0,
+            sections = Array.prototype.slice.call(document.querySelectorAll('.box')),
+            currentSection = 0,
+            len = sections.length
+
+        const handleScroll = (e) => {
+            e.preventDefault()
+
+            let timeNow = Date.now(),
+                delta = e.deltaY,
+                newSection
+
+            if (timeNow - lastAnimation < 2000) {
+                return;
+            }
+
+            if (e.deltaY < 0) {
+                // Up
+                newSection = (currentSection > 0) ? currentSection - 1 : currentSection
+            } else {
+                // Down
+                newSection = (currentSection < len - 1) ? currentSection + 1 : currentSection
+            }
+
+            if (currentSection !== newSection) {
+                // newSection is currentSection now
+                // And `old` currentSection is previousSection
+                if (currentSection < newSection) {
+                    // Moving Down
+                    removeClass(sections[newSection], 'under')
+                    addClass(sections[newSection], 'current')
+                    removeClass(sections[currentSection], 'current')
+                    addClass(sections[currentSection], 'above')
+                } else {
+                    // Moving Up
+                    removeClass(sections[newSection], 'above')
+                    addClass(sections[newSection], 'current')
+                    removeClass(sections[currentSection], 'current')
+                    addClass(sections[currentSection], 'under')
+                }
+
+                // Update currentSection
+                currentSection = newSection
+
+                sections.forEach((item, index) => {
+                    // item.style.top = `${(index - currentSection) * 100}vh`
+                    item.style.transform = `translateY(${(index - currentSection) * 100}vh)`
+                })
+            }
+
+            lastAnimation = timeNow
+        }
+
+        // first-load
+        addClass(sections[currentSection], 'current')
+        document.addEventListener('keydown', (ev) => {
+                if (ev.keyCode === 38 || ev.keyCode === 40) {
+                    ev.preventDefault()
+                    return false
+                }
+            }, false)
+        document.addEventListener('wheel', handleScroll)
+        })()
+
+
+        // $(function(){ 
+        //     var count = 0;
+            
+        //     $("html,body").animate({ scrollTop: 0 }, 0);
+            
+        //     $("body").mousewheel(function(event, delta){
+        //         // delta 若是負值是滾輪往下滾；反之則是滾輪往上滾
+        //         // $(this).html(count += delta).css({
+        //         //     backgroundColor: count >=0 ? "green" : "red"
+        //         // });
+               
+        //         delta=-delta;  //delta預設滾輪往下滾為負數 -> 變正數
+        //         count+=delta;
+        //         if(count>2){
+        //             count=2;
+        //         }else if(count<0){
+        //             count=0;
+        //         }
+        //         console.log(count);
+        //         $("html, body").stop(true,true).animate({ scrollTop: $('.home_wrap .section').eq(count).offset().top }, 1000);
+                
+        //         // return false;
+        //     });
+
+        
+        // });
+        </script>
+</body>
+</html>

@@ -1,0 +1,38 @@
+<?php /* */ ?>
+<div class="productlist flex">
+
+    <?php /*  */ ?>
+    <?php while($row = $c_result->fetch_assoc()):
+    ?>
+    <div class="product" data-sid="<?= $row['sid'] ?>">
+        <div class="card" >
+            <figure class="pro"><img src="imgs/pro_200px/<?= $row['number'] ?>.jpg" alt="<?= $row['name'] ?>"></figure>
+        </div>
+        <div class="flex name center"><?= $row['name'] ?></div>
+        <div class="info">
+            <ul>
+                <li><?= $row['artist_eng'] ?></li>
+                <li>NT. <?= $row['price'] ?></li>
+            </ul>
+            <a type="button" class="love_btn"><img src="./imgs/icon/favorite_30px.svg" alt="加入收藏"  title="加入收藏"></a>
+        </div>
+    </div>
+    <?php endwhile; ?>
+</div>
+
+
+
+<div class="pagination">
+    <ul class="page flex">
+        <li><<</li>
+        <?php
+                    $pnum = 11;
+                    for($i=$page-5 ; $i<=$page+5 ; $i++):
+                    if($i>=1 and $i<=$t_pages):
+        ?>
+        <li class="<?= $i==$page ? 'active' : '' ?>"><a href="?cate=<?= $cate ?>&page=<?= $i ?>"><?= $i ?></a></li>
+        <?php endif; ?>
+        <?php endfor; ?>
+        <li>>></li>
+    </ul>
+</div>

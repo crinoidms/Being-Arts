@@ -1,0 +1,314 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>Document</title>
+    <style>
+        *{
+            margin:0;
+			padding: 0;
+			font-family: Arial,"微軟正黑體";
+			font-size: 16px;
+			/* letter-spacing: 2px; */
+			box-sizing: border-box;
+            list-style: none;
+            color:#a5875d;
+            line-height: 10px;
+            transition: all .5s;
+        }
+        p{
+            line-height: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            display: flex;
+        }
+        .flex{
+            display: flex;
+            flex-wrap:wrap ;
+            /* align-items: center; */
+        }
+        .between{
+            justify-content: space-between;
+        }
+        .center{
+            justify-content: center;
+        }
+        .icon img{
+            width:30px;
+            height:30px;
+        }
+/* nav------------------------------------------ */
+        nav{
+            padding:2px;
+            flex:1;
+            height:100vh;
+            position: fixed;
+            right:0;
+            background-color: white;
+            border-left:#D6CBBC 1px solid;
+        }
+        nav ul li img{
+            width:30px;
+            margin:6px;
+        }
+        .nav_bottom{
+            position: absolute;
+            bottom:0;
+        }
+        a.n_bag{
+          position: relative;  
+        }
+        span.badge{
+           background-color: #967E53;
+           width:20px;
+           height:20px;
+           border-radius: 50%; 
+           color:white;
+           position: absolute;
+           right:0;
+           bottom:5px;
+           text-align: center;
+           line-height: 20px;
+           
+        }
+/* aside------------------------------------------ */
+        aside{
+            flex:2;
+            flex-direction: column;
+            height:100vh;
+            position: fixed;
+            left:0;
+            border-style:solid;
+            border-width: 0 2px 0 0;
+            border-image: linear-gradient(to bottom, #967E53 0%, #ffffff 100%);
+            border-image-slice: 1;
+            background-color: white;
+            z-index: 1;
+        }
+      
+
+        aside .logo img{
+            width:150px;
+            margin:20px;
+        }
+        aside .category_bg1 img{
+            position:absolute;
+            bottom:0;
+            width:190px;
+            height:190px;
+        }
+        .aside_ul{
+            text-align: right;   
+        }
+        .aside_ul li a{
+            line-height: 35px;
+            margin-right:20px;
+            color:#999;
+        }
+        .aside_ul li a:hover{
+            color:#603813;
+        }
+/* container------------------------------------------ */
+        .container{
+            width:100%;
+            
+            /* display: flex;
+            justify-content: space-between; */
+            
+        }
+        .contain{
+            margin:65px auto;
+            width:80%;
+            /* background: #603813; */
+            padding-left:150px;
+        }
+/* pro----------------------------------- */
+        .pro{
+            position: fixed;
+            /* height:100vh; */
+            /* margin-left:20%; */
+            /* margin-top:65px;  */
+        }
+        .pro ul li{
+            line-height: 30px;
+        }
+        .text{
+            width:350px;
+            height:200px;
+            overflow: auto;
+            /* border:1px solid rgb(173, 173, 173); */
+            border-right:none;
+            /* padding: 10px; */
+            /* border-radius: 5px; */
+            margin-top:30px;    
+        }
+        .text p{
+            font-size: 14px;
+        }
+        
+        .share{
+            /* margin-top: 10px; */
+        }
+        .share a{
+            color:rgb(107, 106, 106);
+        }
+        select{
+            margin-top: 30px;
+            width:120px;
+            
+        }
+        
+        .button{
+            background-color: #947c50;
+            margin-top:20px;
+            border:1px solid transparent;
+        }
+        .button:hover{
+            background-color: white;
+            border:1px solid #947c50;
+        }
+        .button a{
+            
+           padding:10px 45px;
+           color: white;
+        } 
+        .button a:hover{
+            color: #947c50;
+        }
+/* pic----------------------------------- */
+        .pic{
+            position: relative;
+            left:500px;
+            /* margin:65px auto;    */
+        }
+        .pic ul li{
+            width:650px;
+            height:550px;
+            overflow: hidden;
+            margin-bottom:20px;
+
+        }
+        .pic img{
+            width:650px;
+            height:550px;
+            /* min-width: 400px; */
+            object-fit: contain;
+        }
+
+        
+
+
+    </style>
+</head>
+<body>
+    <div class="wrap">
+<!-- aside -->
+        <aside>
+            <a href="" class="logo"><img src="imgs/icon/logo_full_150px.svg" alt=""></a>
+            <ul class="aside_ul">
+                <li><a href="" >複製畫</a></li>
+                <li><a href="">雕塑品</a></li>
+                <li><a href="">居家裝飾</a></li>
+                <li><a href="">文創商品</a></li>
+                <li><a href="">每月典藏</a></li>
+                <li><a href="">展覽專區</a></li>
+                <li><a href="">美術用品</a></li>
+            </ul>
+            <div class="category_bg1"><img src="imgs/category_bg1.png" alt=""></div>
+        </aside>
+<!-- container -->
+        <div class="container">
+            <div class="contain flex between">
+                <div class="pro">
+                    <ul>
+                        <li><p style="font-size:28px; color:#852b21; ">蒙娜麗莎</p><p style="font-size:20px;line-height: 40px;color:#852b21;">Mona Lisa</p></li>
+                        <hr>
+                        <br>
+                        <li><span style="font-size:14px;">創作者&nbsp;</span> 李奧納多．達文西</li>
+                        <li><span style="font-size:14px;">流派 &nbsp;&nbsp;&nbsp; </span> 文藝復興</li>
+                        <li><span style="font-size:14px;">材質 &nbsp;&nbsp;&nbsp; </span> 霧面厚質畫布微噴輸出</li>
+                    </ul>
+                    <div class="text">
+                        <p>《蒙娜麗莎》中的人物描繪手法可以說是自然主義的先驅，因此在繪畫史上具有轉捩點的重要地位。達文西運用了一種稱為「暈塗法」的技法，也就是將透明的油彩層層塗上，使底層色彩的明暗界線逐漸模糊，同時他也去掉礙眼的輪廓線，讓人物柔和的浮現出來。蒙娜麗莎的微笑永遠帶著一層柛秘的面紗，是因為她那微微翹起的嘴角左右不太平均，嘴唇的輪廓不清晰所致，加上暈塗法使光與影微妙的融合，成功地顯出獨特的效果。</p>
+                    </div>
+                    <ul class="share flex between icon">
+                        <li><a href=""><img src="imgs/icon/share_g_30px.svg" alt="">分享商品</a></li>
+                        <li><a href=""><img src="imgs/icon/favorite_g_30px.svg" alt="">加入收藏</a></li>
+                        <li><a href=""><img src="imgs/icon/game_30px.svg" alt="互動"  title="互動">試試空間比對</a></li>
+                    </ul>
+                    <ul class="flex between">
+                        <li>尺寸
+                            <select name="size">
+                                <option value="big">大</option>
+                                <option value="small">小</option> 
+                            </select>
+                        </li>
+                        <li>數量
+                            <select name="count">
+                                <option value="1">1</option>
+                                <option value="2">2</option> 
+                            </select>
+                        </li>
+                    </ul> 
+                    <ul class="flex between">
+                        <li class="button"><a href="">放入購物袋</a></li>
+                        <li class="button"><a href="">直接購買</a></li>
+                    </ul>
+                </div>
+                <div class="pic">
+                    <ul>
+                        <li><img src="imgs/pro/p1/p101.jpg" alt=""></li>
+                        <li><img src="imgs/pro/p1/p102.jpg" alt=""></li>
+                        <li><img src="imgs/pro/p1/p103.jpg" alt=""></li>
+                    </ul>
+                </div>
+           </div>
+                
+             </div>
+<!-- nav -->
+        <nav>
+            <ul class="nav_top">
+                <li><a href="" type="button"><img src="imgs/icon/shop_30px.svg" alt="線上商店" title="線上商店"></a></li>
+                <li><a href="" type="button"><img src="imgs/icon/ham_30px.svg" alt="網站地圖"   itle="網站地圖"></a></li>
+                <li><a href="" type="button"><img src="imgs/icon/member_30px.svg" alt="會員"  title="會員"></a></li>
+                <li><a class="n_bag" href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="購物袋"  title="購物袋">
+                    <span class="badge">20</span></a></li>
+                <li><a href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="收藏"  title="收藏"></a></li>
+                <li><a href="" type="button"><img src="imgs/icon/game_30px.svg" alt="互動"  title="互動"></a></li>
+            </ul>
+            <ul class="nav_bottom">
+                <li><a href="" type="button"><img src="imgs/icon/share_30px.svg" alt="分享"  title="分享"></a></li>
+                <li><a href="" type="button"><img src="imgs/icon/map_30px.svg" alt="交通資訊"  title="交通資訊"></a></li>
+            </ul>
+        </nav>
+    </div>
+    <script
+  src="https://code.jquery.com/jquery-3.2.1.min.js"
+  integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+  crossorigin="anonymous"></script>
+    <script>
+       //blur
+       $(".bag, .favorite").hover(function(){
+			$(".pic").removeClass("blur");
+            $(this).nextAll(".pic").addClass("blur");   
+		},function(){
+			$(".pic").removeClass("blur");
+		});
+
+        //filter school
+        $(".school li a").hover(function(){
+			$(".painter").removeClass("painterr");
+            $(this).nextAll(".painter").addClass("painterr");   
+		},function(){
+			$(".painter").removeClass("painterr");
+		});
+
+
+    </script>
+</body>
+</html>

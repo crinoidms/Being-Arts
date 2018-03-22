@@ -1,0 +1,350 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="./css/reset.css">
+    <link rel="stylesheet" href="./navcsstest.css">
+    <title>bar</title>
+    <style>
+        /*----------------------------------header--------------------------------*/
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: rgba(255,255,255,.8);
+            position: fixed;
+            z-index: 2;
+        }
+        header .logo img{
+            width:150px;
+            margin:20px;
+        }
+        .bar_nav{
+            margin-right: 80px;
+            margin-top: 35px;
+        }
+        .bar_nav li{
+            margin-left: 25px; 
+        }
+        .bar_nav li:hover{
+            transform: translateY(-3px);   
+        }
+        .bar_nav li a{
+            color:#947C50;
+        }
+        .bar_nav li a:hover{
+            color:#852B21;
+        }
+        
+/*----------------------------------banner--------------------------------*/
+        .bar_banner{
+            /* background: red; */
+            width:calc(100% - 47px);
+            margin-top: 70px; 
+            position: relative;
+        }
+       .bar_banner figure img{
+           margin-left:50%;
+           transform: translateX(-50%);
+       }
+       .bar_banner .banner_p{
+           position: absolute;
+           top:48%;
+           left:20%;
+           color:#fff;
+           font-size: 28px;
+           font-weight: 200;
+           font-family: Arial, "jf03";
+       }
+/*---------------------------------section2--------------------------------*/
+        .section2{
+            display: flex;
+            width:100%;
+            /* background: green; */
+        }
+        .section2 .left_p{
+           flex:8;
+            
+       }
+       .section2 .left_p p{
+           width:70%;
+           margin-top:20%;
+           margin-left:15%;
+           font-size: 18px;
+           line-height: 28px;
+           letter-spacing: 4px;
+           text-align:center; 
+           color:#333;
+       }
+
+       .section2 .right_pic{
+            flex:2;
+            margin-top:-5%;
+            position: relative;
+            z-index: 1;
+       }
+       .section2 .right_pic img{
+           margin:5px;
+       }
+/*---------------------------------section2--------------------------------*/
+        .section3{
+            width:100%;
+            height:100vh;
+            background: url(imgs/bar/bar_3.jpg) 0 0 no-repeat;
+            display: flex;
+        }
+        .section3 .tit{
+            flex:6;
+           
+        }
+        .section3 .p{
+            flex:4;
+        }
+        .section3 .p p{
+            color:#852B21;
+            font-size: 20px;
+           line-height: 40px;
+           letter-spacing: 4px;
+           width:70%;
+           margin-top:45%;
+           margin-left:20%;
+        }
+/*---------------------------------section4--------------------------------*/
+        .section4{
+            width:calc(100% - 47px);
+            display: flex;
+        }
+        .section4 .left_p{
+            flex:4;
+        }
+        .section4 .left_p p{
+            color:#333;
+            font-size: 16px;
+           line-height: 28px;
+           letter-spacing: 4px;
+           /* text-align: center; */
+           width:70%;
+           margin-top:20%;
+           margin-left:15%;
+        }
+        .section4 .left_p p span{
+            color:#852B21;
+            font-size: 20px;
+            line-height: 30px;
+           letter-spacing: 4px;
+        }
+/*----------------------------------scroll--------------------------------*/
+::-webkit-scrollbar {
+            width: 5px;
+            height: 10px;
+        }
+
+        ::-webkit-scrollbar-button {
+            width: 5px;
+            height: 5px;
+        }
+
+        ::-webkit-scrollbar-thumb {
+            background: #947c50;
+            border: 71px none #ffffff;
+            border-radius: 31px;
+        }
+
+        ::-webkit-scrollbar-thumb:hover {
+            background: #947c50;
+        }
+
+        ::-webkit-scrollbar-thumb:active {
+            background: #947c50;
+        }
+
+        ::-webkit-scrollbar-track {
+            background: #CCC4B5;
+            border: 65px none #ffffff;
+            border-radius: 34px;
+        }
+
+        ::-webkit-scrollbar-track:hover {
+            background: #fff;
+        }
+
+        ::-webkit-scrollbar-track:active {
+            background: #CCC4B5;
+        }
+
+        ::-webkit-scrollbar-corner {
+            background: transparent;
+        }
+    </style>
+</head>
+<body>
+    <!-- nav -->
+    <div class="nav">
+            <ul class="nav_top">
+                <li class="ham">
+                    <button class="js-menu menu" type="button">
+                        <span class="bar"></span>
+                    </button>   
+                </li>
+                <div class="ham"><p>網站地圖</p></div>
+                <li class="login member"><a href="edit.html" type="button"><img src="imgs/icon/member_30px.svg" alt="會員"  title=""></a><div class="member"><p>會員中心</p></div><div class="login"><p>登入</p></div></li>
+                
+                
+                <li class="shop"><a class="n_bag" href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="購物袋"  title="">
+                    <span class="badge">20</span></a></li>
+                <div class="shop"><p>購物袋</p></div>
+                <li class="love"><a href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="收藏"  title=""></a></li>
+                <div class="love"><p>收藏</p></div>
+                <li class="space"><a href="" type="button"><img src="imgs/icon/game_30px.svg" alt="互動"  title=""></a></li>
+                <div class="space"><p>空間比對</p></div>
+            </ul>
+
+            <ul class="nav_bottom">
+                
+                <li class="share"><a href=""  type="button"><img src="imgs/icon/share_30px.svg" alt="分享"  title=""></a></li>
+                <div class="share"><p>分享</p></div>
+                <li class="locat"><a href="" type="button"><img src="imgs/icon/map_30px.svg" alt="交通資訊"  title=""></a></li>
+                <div class="locat"><p>交通資訊</p></div>
+            </ul>
+    </div>
+        <nav class="map map1">
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/01.svg" alt=""></li> 
+                <li class="map_tit">線上商店</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/onlineshop.png" alt=""></li>
+                <li ><a href="">複製畫</a></li>
+                <li><a href="">雕塑品</a></li>
+                <li><a href="">文創商品</a></li>
+                <li><a href="">展覽專區</a></li>
+                <li><a href="">美術用品</a></li>
+                
+            </ul>
+        </nav>
+        <nav class="map map2" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/02.svg" alt=""></li>
+                <li class="map_tit">藝術酒吧</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/paintingbar.png" alt=""></li>
+                <li><a href="">空間簡介</a></li>
+                <li><a href="">餐點與飲品</a></li>
+                <li><a href="">畫具租借說明</a></li>
+                <li><a href="">繪畫課程</a></li>
+                
+            </ul>
+        </nav>
+        <nav class="map map3" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/03.svg" alt=""></li>
+                
+                <li class="map_tit">了解BA</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/aboutba.png" alt=""></div></li>
+                <li><a href="">品牌故事</a></li>
+                <li><a href="">交通資訊</a></li>                                
+                <li><a href="">追蹤我們</a></li>
+                <li><a href="">聯絡我們</a></li>
+            </ul>
+        </nav>
+        <nav class="map map4">
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/04.svg" alt=""></li>
+                <li class="map_tit">當期展覽</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/exhibition.png" alt=""></li>
+                <li><a href="">當期展覽</a></li>
+                <li><a href="">展覽回顧</a></li>
+            </ul>
+        </nav>
+        <nav class="map map5" >
+            <ul>
+                <li class="map_num"><img class="num" src="imgs/map/05.svg" alt=""></li>
+                <li class="map_tit">最新活動</li>
+                <li class="map_pic"><div class="pic"><img class="scale" src="imgs/map/monthly.png" alt=""></li>
+                <li><a href="">杯墊創作票選活動</a></li>
+            </ul>
+            <ul class=" map5_icon">
+                <li><a href=""><img class="fb" src="imgs/icon/fb_20px.svg" alt=""></a></li>
+                <li><a href=""><img class="line" src="imgs/icon/line_20px.svg" alt=""></a></li>
+                <li><a href=""><img class="ig" src="imgs/icon/ig_20px.svg" alt=""></a></li>
+            </ul>
+        </nav>
+        <header class="flex between">
+            <a href="" class="logo"><img src="imgs/icon/logo_full_150px.svg" alt=""></a>
+            <ul class="bar_nav flex">
+                <li><a href="#section2" >空間簡介</a></li>
+                <li><a href="#section3">飲品</a></li>
+                <li><a href="#section4">畫具租借說明</a></li>
+            </ul>
+        </header>
+        <div class="bar_banner" id="section2">
+            <figure><img src="imgs/bar/bar_banner.jpg" alt=""></figure>
+            <!-- <div class="banner_p">空間簡介/</div> -->
+        </div>
+        <div class="section2">
+            <div class="left_p"><p>「Being  Arts 」提供了人們親近藝術的空間，本店的二樓就是繪畫酒吧，到酒吧消費的顧客們可以自由使用店內基本的畫具組，也可以租用進階的創作工具，若無繪畫的靈感，也可以參與酒吧定期開設的繪畫課程。
+                </p></div>
+            <div class="right_pic">
+                 <img src="imgs/bar/bar_2_1.jpg" alt="">
+                 <img src="imgs/bar/bar_2_2.jpg" alt="">
+                 <img src="imgs/bar/bar_2_3.jpg" alt="">
+            </div>
+        </div>
+        <div class="section3" id="section3">
+            <!-- <img src="imgs/bar/bar_3.jpg" alt=""> -->
+            <div class="tit"></div>
+            <div class="p"><p>
+                    雞尾酒之王<br>
+                    血腥瑪麗<br>
+                    柯夢波丹<br>
+                    粉紅佳人 <br>
+                    性感海灘<br>
+                    長島冰茶<br>
+                    藍色夏威夷<br>
+                    瑪格莉特<br>
+            </p></div>
+        </div>
+        <div class="section4" id="section4">
+            <div class="left_p">
+                <p> 
+                    <span>水彩畫 畫具組</span>  <br>原價 $5000（3小時）<br>    平日優惠價 $3500（3小時） <br><br>    
+                    <span>油畫 畫具組 </span>   <br> 原價 $2500 （3小時）<br>    平日優惠價 $1750（3小時） <br><br>    
+                        <span>色筆 </span>     <br>原價 $500 （1.5小時）</p>
+            </div>
+            <div class="right_pic">
+               <img src="imgs/bar/bar_4.jpg" alt="">
+            </div>
+        </div>
+        <script
+			src="https://code.jquery.com/jquery-3.2.1.min.js"
+			integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+			crossorigin="anonymous"></script>
+        <script>
+            /* ham */
+		var isActive = false;
+
+        $('.js-menu').on('click', function() {
+            if (isActive) {
+                $(this).removeClass('active');
+                $('body').removeClass('menu-open');
+            } else {
+                $(this).addClass('active');
+                $('body').addClass('menu-open');
+            }
+
+            isActive = !isActive;
+        });
+
+        /* phone  map_ul2 */
+        var Active = false;
+        $(".tit").on('click', function() {
+            if (Active) {
+                $(".map_ul2").removeClass('tit-open');
+            } else {
+                $('.map_ul2').addClass('tit-open');
+            }
+
+            Active = !Active;
+        });
+
+        </script>
+</body>
+</html>

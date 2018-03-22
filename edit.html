@@ -1,0 +1,491 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <title>edit</title>
+    <link rel="stylesheet" href="lib/fontawesome-free-5.0.6/web-fonts-with-css/css/fontawesome-all.css">
+    <link rel="stylesheet" href="https://code.jquery.com/ui/1.12.0/themes/smoothness/jquery-ui.css">
+    <script src="lib/jquery-3.2.1.min.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <link rel="stylesheet" href="css/reset.css">
+    <style>
+         *{
+            margin:0;
+			padding: 0;
+			font-family: Arial,"jf03";
+			font-size: 14px;
+			letter-spacing: 1px;
+			box-sizing: border-box;
+            list-style: none;
+            color:#333;
+            line-height: 10px;
+            transition: all .5s;
+        }
+        p{
+            line-height: 20px;
+        }
+        a{
+            text-decoration: none;
+        }
+        .wrap{
+            display: flex;
+        }
+        .flex{
+            display: flex;
+            flex-wrap:wrap ;
+            
+        }
+        .center{
+            text-align: center;
+            justify-content: center;
+        }
+        .between{
+            justify-content: space-between;
+        }
+        .icon img{
+            width:30px;
+            height:30px;
+            cursor: pointer;
+        }
+        i{
+            cursor: pointer;
+            color:#967E53;
+        }
+
+        .fix{
+            position: fixed;
+        }
+        input:focus, button:focus, select:focus{
+            outline: none;
+        }
+        @font-face {
+            font-family: jf03 ;
+            src:url(./lib/font/jf-jinxuan-fresh2.2-book.otf);
+        }
+        
+/* nav------------------------------------------ */
+        nav{
+            padding:2px;
+            flex:1;
+            height:100vh;
+            position: fixed;
+            right:0;
+            background-color: white;
+            border-left:#D6CBBC 1px solid;
+            /* background: black; */
+            z-index: 10;
+        }
+        nav ul li img{
+            width:30px;
+            margin:6px;
+        }
+        .nav_bottom{
+            position: absolute;
+            bottom:0;
+        }
+        a.n_bag{
+          position: relative;  
+        }
+        span.badge{
+           background-color: #967E53;
+           width:20px;
+           height:20px;
+           border-radius: 50%; 
+           color:white;
+           position: absolute;
+           right:0;
+           bottom:5px;
+           text-align: center;
+           line-height: 20px;
+           
+        }
+/* wrap------------------------------------------ */
+        .wrap{
+            width:100%;
+            /* background: blue; */
+        }
+        .figure_logo{
+            width:100%;
+            z-index: 2;
+        }
+        a.logo img{
+            width:150px;
+            margin:20px;
+        }
+        figure.bg{
+            height:100vh;
+            width:326px;
+            position: fixed;
+            right:47px;
+            
+        }
+        figure.bg img{
+            width:326px;
+            position: absolute;
+            bottom:0;
+        }
+        
+/* container flow------------------------------------------ */
+        .container{
+            width:60%;
+            /* background: red; */
+            margin:0 auto;
+            
+        }
+        .flow{
+            /* width:598px; */
+            margin: 65px auto;
+            height:80px;
+            /* background: green; */
+            justify-content: center;
+            align-items:center;
+        }
+        .square{
+            width:165px;
+            height:50px;
+            border:1px solid #D9D1C2;
+            background: #fff;
+            position: relative;
+            align-items:center;
+            justify-content: center;
+            cursor: pointer;
+        }
+        .square p{
+            color:#967E53;
+            font-size: 12px;
+            /* position: absolute;
+            top:44px;
+            left:15px; */
+
+        }
+        .square:hover{
+            background: #D9D1C2;
+            height:58px;
+        }
+        .active{
+            background: #D9D1C2;
+            height:58px;
+        }
+        
+        .square i{
+            font-size: 20px;
+            color:#967E53;
+            margin:15px;
+        }
+        .square span{
+            color:#967E53;
+        }
+/* container title------------------------------------------ */
+      
+       
+        .tit p{
+            font-size: 22px;
+            margin-bottom:30px;
+        }
+/* container form------------------------------------------ */
+        .form_card{
+            border:1px solid #967E53;
+            position: relative;
+            padding: 20px;
+            width:400px;
+            height:490px;
+            margin-bottom:50px;
+        }
+        .form_group{
+            margin:10px;
+        }
+        .info{
+            
+            margin-left: 35px;
+            /* transform: translateX(-50%); */
+        }
+        label.edit_tit{
+            background: #fff;
+            font-size: 18px;
+            position: absolute;
+            left: 50%;
+            top:-8px;
+            transform: translateX(-50%);
+        }
+
+        small{
+            color:red;
+            margin-left:120px;
+            line-height: 25px;
+        }
+        .info select{
+            margin-bottom:4px;
+        }
+        input.address{
+            margin-left:120px;
+        }
+        .form_group label.address, small{
+            display: block;
+            margin-left: 120px;
+            line-height: 25px;
+        }
+/* container btn------------------------------------------ */
+
+        .butn{
+            width:150px;
+            height:25px;
+            margin-bottom:150px;
+            text-align: center; 
+            padding: 2px;
+            /* padding-left:20px; */
+            margin-left: 50%;
+            transform: translateX(-50%);
+            margin-top:70px;
+        }
+    
+        .b_brown{
+            border:1px solid #967E53;
+            background: #967E53;
+        }
+        a .b_brown{
+            position: relative;
+        }
+        .b_brown p{
+            color:#fff;
+            letter-spacing: 5px;
+        }
+        .b_brown:hover p{
+            letter-spacing: 18px;
+        }
+   
+
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+/* ------------------------------------------------------------------------------------ */
+        
+@media screen and (max-width: 375px){
+        figure.bg img{
+            width:150px;
+            right:0;
+            bottom:60px;
+        }
+        a.logo img{
+            margin:15px 10px;
+        }
+        .figure_logo{
+            background-color: rgba(255,255,255,.8);
+        }
+        nav{
+            height:100%;
+            position: fixed;
+        }
+        .container{
+            width:323px;
+            margin: 0;
+            /* height:100vh;   */
+            /* position: fixed;  */
+        }
+        .flow{
+            width:327px;
+            margin:75px 0 30px 0;
+            padding: 0 20px;
+        }
+        .phone_none{
+            display: none;
+        }
+        .square{
+            width:120px;
+            height:40px;
+        }
+        .square i{
+            font-size: 15px;
+            margin:10px;
+        }
+        .like{
+            width:327px;
+        }
+        .form_card{
+            height:550px;
+        }
+
+/* container  title------------------------------------------ */
+        .pic{
+            width:85px;
+            height:45px;
+            background: #D9D1C2;
+        }
+        .pic img{
+            width:50px;
+            margin-left:40px;
+            margin-top:2px;
+        }
+        .tit p{
+            font-size: 16px;
+            margin-top:20px;
+        }
+       small{
+           margin-left:85px;
+       }
+       .info{
+           margin:0 auto;
+       }
+       input.address{
+            margin-left:85px;
+        }
+        .form_group label.address, small{
+            margin-left:85px;
+        }
+        .form_card_pass{
+            height:400px;
+        }
+}       
+
+    </style>
+</head>
+<body>
+    <!-- nav -->
+    <nav>
+        <ul class="nav_top">
+            <li><a href="" type="button"><img src="imgs/icon/ham_30px.svg" alt="網站地圖"   itle="網站地圖"></a></li>
+            <li><a href="" type="button"><img src="imgs/icon/member_30px.svg" alt="會員"  title="會員"></a></li>
+            <li><a class="n_bag" href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="購物袋"  title="購物袋">
+                <span class="badge">20</span></a></li>
+            <li><a href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="收藏"  title="收藏"></a></li>
+            <li><a href="" type="button"><img src="imgs/icon/game_30px.svg" alt="互動"  title="互動"></a></li>
+        </ul>
+        <ul class="nav_bottom">
+            <li><a href="" type="button"><img src="imgs/icon/share_30px.svg" alt="分享"  title="分享"></a></li>
+            <li><a href="" type="button"><img src="imgs/icon/map_30px.svg" alt="交通資訊"  title="交通資訊"></a></li>
+        </ul>
+    </nav>
+    <!-- wrap -->
+    <div class="wrap flex">
+        <figure class="fix figure_logo">
+            <a href="" class="logo"><img src="imgs/icon/logo_full_150px.svg" alt=""></a>
+        </figure>
+        
+        <figure class="fix bg">
+            <img src="imgs/member/member_bg.png" alt="">
+        </figure>    
+    </div>
+    <!-- container -->
+    <div class="container">
+        <!-- flow -->
+        <div class="flow flex">
+            <a href="edit.html"><div class="square flex active"><i class="fas fa-edit"></i><p>會員資料修改<span class="phone_none"><br>Edit</span></p></div></a>
+            <a href="order.html"><div class="square flex"><i class="fas fa-list-ul"></i><p>訂單查詢<span class="phone_none"><br>Order</p></div></a>
+            <a href="like.html"><div class="square flex"><i class="far fa-heart"></i><p>收藏商品<span class="phone_none"><br>Like</p></div></a>
+            <a href="faq.html"><div class="square flex"><i class="fas fa-question"></i><p>常見問題<span class="phone_none"><br>FAQ</p></div></a>
+        </div>
+    <!-- like -------------------------->
+        <div class="like">
+            <!-- title -->
+            <div class="title flex center">
+                 <div class="tit"><p>會員資料修改</p></div>
+            </div>
+
+            <div style="margin-top:20px; margin-bottom:50px;" class="flex between">
+                
+                <!--  -->
+                <div class="form_card form_card_pass">
+                    <label for='one' class="edit_tit center">修改密碼</label>
+                    <form action=""for="one" method="post" name="" onsubmit="">
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">會員帳號&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="" class="" value="" >
+                            </div>  
+                            <small id="" class="form-text">請輸入會員帳號</small>
+                        </div> 
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">舊密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="password" name="" class="" value="" >
+                            </div>
+                            <small id="" class="form-text">請輸入舊密碼</small>
+                        </div> 
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">新密碼&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="password" name="" class="" value="" >  
+                            </div>
+                            <small id="" class="form-text">請輸入新密碼</small>
+                        </div> 
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">新密碼確認&nbsp;</label>
+                                <input type="password" name="" class="" value="" >
+                            </div>
+                            <small id="" class="form-text">請輸入新密碼</small>
+                        </div>
+                        <a href="">
+                            <div class="butn b_brown"> 
+                                <p>修改</p>     
+                            </div>
+                        </a>
+                    </form>
+                </div>
+                <div class="form_card">
+                    <label for='one' class="edit_tit ">修改會員資料</label>
+                    <form action=""for="one" method="post" name="" onsubmit="">
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">暱稱&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="" class="" value="" >
+                            </div>
+                            <small id="" class="form-text">請輸入暱稱</small>
+                        </div> 
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">收件人&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="" class="" value="" >
+                            </div>
+                            <small id="" class="form-text">請輸入收件人</small>
+                        </div> 
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">收件地址&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <select name="" onchange="" onclick="return false;" id="">
+                                    <option value="">台北市</option>
+                                    <option value="">新北市</option>
+                                    <option value="">台中市</option>
+                                </select>  
+                            </div>
+                            <input type="text" name="" class="address" value="" >
+                             <label for="">&nbsp;<br></label>
+                             <small id="" class="form-text">請輸入收件地址</small>
+                        </div>  
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">手機&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <input type="text" name="" class="" value="" >
+                            </div>
+                            <small id="" class="form-text">請輸入正確手機號碼</small>
+                        </div>
+                        <div class="form_group">
+                            <div class="info">
+                                <label for="">取貨門市&nbsp;&nbsp;&nbsp;&nbsp;</label>
+                                <select name="" onchange="" onclick="return false;" id="">
+                                    <option value="">台北市</option>
+                                    <option value="">新北市</option>
+                                    <option value="">台中市</option>
+                                </select>   
+                            </div>
+                            <input type="text" name="" class="address" value="" ><br>
+                             <label class="address" for="">電子地圖選擇門市</label>
+                             <small id="" class="form-text">請選填取貨門市</small>
+                        </div> 
+                        <a href="">
+                            <div class="butn b_brown"> 
+                                <p>修改</p>     
+                            </div>
+                        </a>
+                    </form>
+                </div>
+
+            </div>  
+    </div>
+
+        <script>
+
+
+        </script>
+</body>
+</html>

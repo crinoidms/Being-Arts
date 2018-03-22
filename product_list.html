@@ -1,0 +1,444 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Title</title>
+    <link href="css/reset.css" rel="stylesheet" type="text/css">
+    <link href="css/nav.css" rel="stylesheet" type="text/css">
+    <style>
+        @font-face {
+            font-family: jf03 ;
+            src:url(./lib/font/jf-jinxuan-fresh2.2-book.otf);
+        }
+/*----------------------------------header--------------------------------*/
+        header{
+            width: 100%;
+            height: 70px;
+            background-color: #fff;
+            position: fixed;
+            z-index: 2;
+        }
+        header .logo img{
+            width:150px;
+            margin:20px;
+        }
+        .store_nav{
+            margin-right: 80px;
+            margin-top: 35px;
+        }
+        .store_nav li{
+            margin-left: 25px;
+        }
+        /*.store_nav li a{*/
+            /*line-height: 70px;*/
+        /*}*/
+        .store_nav li:hover{
+            transform: translateY(-3px);
+        }
+/*----------------------------------banner--------------------------------*/
+        .banner{
+            position: relative;
+            width: 100%;
+            top: 70px;
+        }
+        .banner img{
+            width: 100%;
+            position: relative;
+            z-index: 1;
+        }
+        .banner_left{
+            width: 45%;
+            height: 50px;
+            background-color: #852B21;
+            position: absolute;
+            bottom: -20px;
+            left: 0;
+        }
+        .banner_right{
+            width: 60%;
+            height: 50px;
+            background-color: #947C50;
+            position: absolute;
+            bottom: -40px;
+            right: 0;
+        }
+        .container{
+            width: 100vw;
+            height: 300vh;
+        }
+        .breadcrumbs{
+            margin-top: 10px;
+            margin-left:65px;
+            font-size: 14px;
+            color: #CCC4B5;
+            /*position: fixed;*/
+            /*top:70px;*/
+            /*left:55px;*/
+            /*z-index: 2;*/
+        }
+        .breadcrumbs a{
+            font-size: 14px;
+            color: #CCC4B5 ;
+        }
+        .breadcrumbs a:hover{
+            font-size: 14px;
+            color: #b49c69;
+        }
+        /* filter------------------------------------------ */
+        .filter{
+            margin-left:65px;
+            margin-top:20px;
+        }
+        .fliter ul li {
+            line-height: 30px;
+        }
+        .school li{
+            margin-right:12px;
+            position: relative;
+            float: left;
+        }
+        .school li a{
+            cursor: pointer;
+        }
+        .school li a:hover{
+            color:#CCC4B5;
+        }
+        .right{
+            margin-right:10px;
+            font-size: 14px;
+        }
+        .painter{
+            position: relative;
+            padding: 10px 0;
+        }
+        .painter li{
+            margin-right:12px;
+            position: relative;
+            float: left;
+            /*opacity: 0;*/
+        }
+        .painter li a:hover{
+            color:#603813;
+        }
+        .painterr.noshow{
+            opacity: 0;
+        }
+        #painter1, #painter2, #painter3, #painter4{
+            position: absolute;
+        }
+        .box{
+            width:15px;
+            height:15px;
+            margin:4px;
+            cursor: pointer;
+        }
+        .red{
+            background-color: #e88181;
+        }
+        .orange{
+            background-color:  #eec476;
+        }
+        .yellow{
+            background-color:  #f3e773;
+        }
+        .green{
+            background-color:#a2d084;
+        }
+        .blue{
+            background-color: #96c6e7;
+        }
+        .purple{
+            background-color: #a894b5;
+        }
+        .black{
+            background-color: #130d16;
+        }
+        .white{
+            background-color: #fff;
+            border:1px solid #4d4d4d;
+        }
+        .price_fliter{
+            padding: 3px 0;
+        }
+        /* productlist------------------------------------------ */
+        .card{
+            width:260px;
+            height:335px;
+            margin-right:60px;
+            margin-top:50px;
+            border: 1px #947c50 solid;
+            position: relative;
+        }
+        .productlist{
+            margin-left:135px;
+        }
+        .bag img, .favorite img{
+            width:30px;
+        }
+        .pic img{
+            width:200px;
+            height:200px;
+        }
+        .pro{
+            margin:67.5px auto;
+            width:200px;
+            height:200px;
+            margin-bottom:5px;
+            overflow: hidden;
+        }
+
+        .blur{
+            filter: blur(3px);
+            transition: all .5s;
+        }
+
+        .card:hover .bag{
+            opacity: 1;
+
+        }
+        .bag:hover{
+            filter: brightness(150%);
+        }
+        .card:hover .favorite{
+            opacity: 1;
+
+        }
+        .favorite:hover{
+            filter: brightness(150%);
+        }
+
+        .bag, .favorite{
+            opacity: 0;
+            width:260px;
+            height:166.5px;
+            text-align: center;
+            position: absolute;
+            top:0;
+            z-index: 2;
+            background-color:transparent;
+            cursor: pointer;
+        }
+        .favorite{
+            top:166.5px;
+        }
+        .bag img{
+            margin-top:110px;
+        }
+        .favorite img{
+            margin-top:20px;
+        }
+        li.name{
+            width:260px;
+            height:25px;
+            background-image: url("imgs/title01.png");
+            margin-top:10px;
+            margin-bottom:8px;
+            background-size: cover;
+            line-height: 25px;
+        }
+        .opacity{
+            opacity: 1;
+        }
+        .price p{
+            font-size:14px;
+            color:#852b21;
+        }
+        .info{
+            width:260px;
+            position: relative;
+        }
+        .info ul{
+            /*padding-top: 5px;*/
+        }
+        .info ul li{
+            /*margin: 0 5px;*/
+            padding: 5px;
+        }
+        .bag_btn{
+            position: absolute;
+            top: 5px;
+            right: 5px;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+        }
+        .bag_btn:hover{
+            filter: brightness(150%);
+        }
+
+        .temp{
+            width: 100vh;
+            height: 100px;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <!-- nav -->
+        <nav>
+            <div class="wrap">
+                <ul class="nav_top">
+                    <li><a href="" type="button"><img src="imgs/icon/shop_30px.svg" alt="線上商店" title="線上商店"></a></li>
+                    <li><a href="" type="button"><img src="imgs/icon/ham_30px.svg" alt="網站地圖"   itle="網站地圖"></a></li>
+                    <li><a href="" type="button"><img src="imgs/icon/member_30px.svg" alt="會員"  title="會員"></a></li>
+                    <li><a class="n_bag" href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="購物袋"  title="購物袋">
+                        <span class="badge">20</span></a></li>
+                    <li><a href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="收藏"  title="收藏"></a></li>
+                    <li><a href="" type="button"><img src="imgs/icon/game_30px.svg" alt="互動"  title="互動"></a></li>
+                </ul>
+                <ul class="nav_bottom">
+                    <li><a href="" type="button"><img src="imgs/icon/share_30px.svg" alt="分享"  title="分享"></a></li>
+                    <li><a href="" type="button"><img src="imgs/icon/map_30px.svg" alt="交通資訊"  title="交通資訊"></a></li>
+                </ul>
+            </div>
+        </nav>
+        <header class="flex between">
+            <a href="" class="logo"><img src="imgs/icon/logo_full_150px.svg" alt=""></a>
+            <ul class="store_nav flex">
+                <li><a href="" >複製畫</a></li>
+                <li><a href="">雕塑品</a></li>
+                <li><a href="">文創商品</a></li>
+                <li><a href="">美術用品</a></li>
+                <li><a href="">展覽專區</a></li>
+            </ul>
+        </header>
+        <div class="banner">
+            <figure><img src="./imgs/store_banner01.jpg" alt=""></figure>
+            <div class="banner_left"></div>
+            <div class="banner_right"></div>
+        </div>
+        <div class="temp"></div>
+        <div class="container">
+<!------------------------------------- filter  ----------------------------------------->
+            <p class="breadcrumbs"><a href="">首頁</a> > <a href="">線上商店</a> > <a href="">複製畫</a></p>
+
+
+<!------------------------------------- filter  ----------------------------------------->
+            <div class="filter">
+                <div class="school">
+                    <ul class="flex ">
+                        <li class="right">流派篩選</li>
+                        <li><a id="school1">文藝復興</a></li>
+                        <li><a id="school2">新古典及寫實主義</a></li>
+                        <li><a id="school3">印象派</a></li>
+                        <li><a id="school4">表現主義及立體派</a></li>
+                        <li><a id="school5">超現實主義</a></li>
+                    </ul>
+                </div>
+                <div class="painter">
+                    <ul class="painterr flex noshow" id="painter1">
+                        <li class="right">畫家篩選</li>
+                        <li><a >達文西</a></li>
+                        <li><a >米開朗基羅</a></li>
+                        <li><a >拉斐爾</a></li>
+                    </ul>
+                    <ul class="painterr flex noshow" id="painter2">
+                        <li class="right">畫家篩選</li>
+                        <li><a href="">米勒</a></li>
+                        <li><a href="">庫爾貝</a></li>
+                        <li><a href="">大衛</a></li>
+                    </ul>
+                    <ul class="painterr flex noshow" id="painter3">
+                        <li class="right">畫家篩選</li>
+                        <li><a href="">梵谷</a></li>
+                        <li><a href="">莫內</a></li>
+                        <li><a href="">雷諾瓦</a></li>
+                        <li><a href="">卡莎特</a></li>
+                    </ul>
+                    <ul class="painterr flex noshow" id="painter4">
+                        <li class="right">畫家篩選</li>
+                        <li><a href="">康丁斯基</a></li>
+                        <li><a href="">孟克</a></li>
+                        <li><a href="">畢卡索</a></li>
+                    </ul>
+                    <ul class="painterr flex noshow" id="painter5">
+                        <li class="right">畫家篩選</li>
+                        <li><a href="">米羅</a></li>
+                        <li><a href="">達利</a></li>
+                    </ul>
+                </div>
+                <ul class="flex">
+                    <li class="right">顏色篩選</li>
+                    <li class="red box"><a href=""></a></li>
+                    <li class="orange box"><a href=""></a></li>
+                    <li class="yellow box"><a href=""></a></li>
+                    <li class="green box"><a href=""></a></li>
+                    <li class="blue box"><a href=""></a></li>
+                    <li class="purple box"><a href=""></a></li>
+                    <li class="black box"><a href=""></a></li>
+                    <li class="white box"><a href=""></a></li>
+                </ul>
+                <ul class="price_fliter flex">
+                    <li class="right">價格篩選</li>
+                    <li><input type="range"></li>
+                </ul>
+            </div>
+<!------------------------------------------------------- productlist  ------------------------------>
+            <div class="productlist flex">
+                <ul class="product">
+                    <li class="card">
+                        <figure class="pro">
+                    <li class="pic"><img src="imgs/pro_200px/p101.jpg" alt=""></li>
+                    </figure>
+                    <div class="bag"><a  href="" type="button"><img src="imgs/icon/bag_30px.svg" alt="" title="">加入購物袋</a></div>
+                    <div class="favorite"><a  href="" type="button"><img src="imgs/icon/favorite_30px.svg" alt="" title="">加入收藏</a></div>
+                    </li>
+                    <li class="flex name center" style="color:white;">蒙娜麗莎</li>
+                    <li class="info">
+                        <ul>
+                            <li>Leonardo da Vinci</li>
+                            <li>NT. 2,000</li>
+                        </ul>
+                        <a type="button" class="bag_btn"><img src="./imgs/icon/bag_30px.svg" alt="購物袋"  title="購物袋"></a>
+                    </li>
+
+                </ul>
+
+            </div>
+        </div>
+    </div>
+    <script src="https://code.jquery.com/jquery-1.12.4.js"></script>
+    <script src="https://code.jquery.com/ui/1.12.1/jquery-ui.js"></script>
+    <script
+            src="https://code.jquery.com/jquery-3.2.1.min.js"
+            integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4="
+            crossorigin="anonymous"></script>
+
+    <script>
+        //blur
+        $(".card").hover(function(){
+            $(".pic").removeClass("blur");
+            $(this).find(".pic").addClass("blur");
+        },function(){
+            $(".pic").removeClass("blur");
+        });
+
+
+        //filter school
+        $("#school1").click(function(){
+            $('.painterr').addClass("noshow");
+            $("#painter1").removeClass("noshow");
+        });
+        $("#school2").click(function(){
+            $('.painterr').addClass("noshow");
+            $("#painter2").removeClass("noshow");
+        });
+        $("#school3").click(function(){
+            $('.painterr').addClass("noshow");
+            $("#painter3").removeClass("noshow");
+        });
+        $("#school4").click(function(){
+            $('.painterr').addClass("noshow");
+            $("#painter4").removeClass("noshow");
+        });
+        $("#school5").click(function(){
+            $('.painterr').addClass("noshow");
+            $("#painter5").removeClass("noshow");
+        });
+
+        //range slider
+
+
+    </script>
+</body>
+</html>
